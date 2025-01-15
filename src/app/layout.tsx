@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Nunito, Roboto, Space_Grotesk } from "next/font/google";
+import {Nunito, Poppins, Roboto, Space_Grotesk } from "next/font/google";
 
 import { ThemeProvider } from "../theme";
 
@@ -20,6 +20,13 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',              
 });
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], // Укажите нужные веса
+  style: ['normal', 'italic'],  // Укажите стили
+  display: 'swap',              // Рекомендуется для улучшения рендера
+});
+
 export const metadata: Metadata = {
   title: "Monocure",
   description: "ALL-IN-ONE solution",
@@ -32,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

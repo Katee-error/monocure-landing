@@ -2163,6 +2163,16 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lucide-react@^0.471.1:
+  version "0.471.1"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.471.1.tgz#16f29cd65c7c847eceab0bbf8592443104423249"
+  integrity sha512-syOxwPhf62gg2YOsz72HRn+CIpeudFy67AeKnSR8Hn/fIIF4ubhNbRF+pQ2CaJrl+X9Os4PL87z2DXQi3DVeDA==
+
+lucide@^0.471.0:
+  version "0.471.0"
+  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.471.0.tgz#ba4bb8f859f016b0ea9e3fdc8631276f8b69c590"
+  integrity sha512-q464ocnqGoI1c0aRLiU3l3GYIZBeddlo2s1+XrkkXjfQo+Y5djyNuVH/pa4zMZyM5RHPF4vlf8FBzHJQNzrvPw==
+
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
@@ -2533,6 +2543,11 @@ regexp.prototype.flags@^1.5.3:
     get-proto "^1.0.1"
     gopd "^1.2.0"
     set-function-name "^2.0.2"
+
+remix@^2.15.2:
+  version "2.15.2"
+  resolved "https://registry.yarnpkg.com/remix/-/remix-2.15.2.tgz#bde271e8d822e61fd27dcd607b4206a29e698a32"
+  integrity sha512-fAawjmgChEWfDbXFizBJvrt2hcP5IiwMmJCbwhtE1IzYOYL9irSBkgX6Ck0wrtPmGz7o0t4bY4GWD+Z+B/9t2Q==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -3067,3 +3082,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-5.0.3.tgz#b323435b73d06b2512e93c77239634374b0e407f"
+  integrity sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==

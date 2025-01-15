@@ -1,22 +1,6 @@
-export const fontFamily = [
-  'Inter',
-  'Roboto-Medium',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  '"Segoe UI"',
-  '"Helvetica Neue"',
-  'Arial',
-  'sans-serif',
-  '"Apple Color Emoji"',
-  '"Segoe UI Emoji"',
-  '"Segoe UI Symbol"',
-].join(',');
 
 export const font = {
-  fonts: {
-    body: fontFamily,
-    heading: fontFamily,
-  },
+
   fontSizes: {
     '4xs': '8px',
     xxxs: '10px',
@@ -30,6 +14,8 @@ export const font = {
     '3xl': '28px',
     '4xl': '32px',
     '5xl': '40px',
+    '6xl': '48px',
+    '7xl':'60px'
   },
   fontWeights: {
     hairline: 100,

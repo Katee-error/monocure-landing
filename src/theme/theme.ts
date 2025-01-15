@@ -10,6 +10,7 @@ import { colors, semanticColors } from './colors';
 import { Badge } from './components/Badge.theme';
 import { Button } from './components/Button.theme';
 import { Checkbox } from './components/Checkbox.theme';
+import { Heading } from './components/Heading.theme';
 import { Input } from './components/Input.theme';
 import { Modal } from './components/Modal.theme';
 import { Radio } from './components/Radio.theme';
@@ -26,7 +27,7 @@ import { container } from './containers';
 import { brakepoint } from './brakepoints';
 
 const config: ThemeConfig = {
-  initialColorMode: 'system',
+  initialColorMode: 'light',
   useSystemColorMode: true,
 };
 
@@ -38,6 +39,7 @@ export const theme = extendTheme(
       global: {
         body: {
           bg: 'white',
+          color: 'gray.primaryText.light'
         },
       },
     },
@@ -49,6 +51,7 @@ export const theme = extendTheme(
     colors,
     components: {
       Badge,
+      Heading,
       Tabs,
       Button,
       Input,

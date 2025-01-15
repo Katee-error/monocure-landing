@@ -1,4 +1,5 @@
-import React from 'react';
+import { Box, Container, Text } from "@chakra-ui/react";
+import React from "react";
 
 interface Props {
   className?: string;
@@ -6,6 +7,10 @@ interface Props {
 
 export const PromoCode: React.FC<Props> = ({ className }) => {
   return (
-    <div className={className}></div>
+    <Box bgColor={'blue'} textAlign={'center'} p={'5'}>
+      <Container maxW={"container.xl"}>
+        <Text color={'white'}>Additional 15% Off Sale. Code: EXTRA15</Text>
+      </Container>
+    </Box>
   );
 };

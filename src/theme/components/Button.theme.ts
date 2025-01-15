@@ -7,13 +7,13 @@ export const Button = {
   },
   baseStyle: {
     fontWeight: 'semibold',
-    borderRadius: '4',
+    borderRadius: '10',
     _disabled: {
       pointerEvents: 'none',
-      backgroundColor: 'grey.offWhite',
+      backgroundColor: 'grey.background',
       color: 'grey.tertiaryText',
-      border: '2px',
-      borderColor: 'grey.background',
+      border: '10px',
+      // borderColor: 'grey.background',
     },
     _focus: {
       ring: 4,
@@ -46,7 +46,7 @@ export const Button = {
   variants: {
     primary: {
       backgroundColor: 'primary.button',
-      color: 'grey.white',
+      color: 'white',
       _hover: {
         backgroundColor: 'primary.text',
       },

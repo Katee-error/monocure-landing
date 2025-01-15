@@ -61,7 +61,7 @@ const rawColors = {
     600: '#1570EF',
     700: '#175CD3',
     800: '#1849A9',
-    900: '#194185',
+    900: '#3489C8',
   }),
   indigo: withDefault({
     25: '#F5F8FF',
@@ -198,8 +198,8 @@ const rawColors = {
 const namedColors = {
   grey: {
     background: {
-      light: '#EEF2F6',
-      dark: '#090D13',
+      light: '#3489C8',
+      dark: '#3489C8',
     },
     overlay: {
       light: '#697586E5',
@@ -222,21 +222,21 @@ const namedColors = {
       dark: '#848A9380',
     },
     tertiaryText: {
-      light: '#697586',
-      dark: '#848A93',
+      light: '#fff',
+      dark: '#fff',
     },
     secondaryText: {
-      light: '#364152',
-      dark: '#B4BAC3',
+      light: '#5f5f60',
+      dark: '#000',
     },
     primaryText: {
-      light: '#121926',
-      dark: '#F8FAFC',
+      light: '#000',
+      dark: '#000',
     },
   },
   primary: {
     background: {
-      light: rawColors.green[100],
+      light: rawColors.blue[900],
       dark: rawColors.green[700],
     },
     button: {
