@@ -35,7 +35,7 @@ export const HighlightedText = () => {
           width="100%"
           height="100%"
           fill="none"
-          stroke="#3489C8" /* Цвет обводки */
+          stroke="#0F89D3" /* Цвет обводки */
           strokeWidth="3"
         />
       </Box>

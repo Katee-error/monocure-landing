@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Container,
@@ -9,90 +10,88 @@ import {
   Badge,
   Circle,
   Tooltip,
+  Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { HighlightedText } from "../ui/heading";
-import { Plus } from "lucide-react";
+import { motion } from "framer-motion";
+import { ButtonComp } from "../ui/button";
 
 interface Props {
   className?: string;
 }
-
-export const Hero: React.FC<Props> = ({ className }) => {
-  const points = [
-    {
-      id: 1,
-      top: "20%",
-      left: "30%",
-      description: "Описание для первой точки",
-    },
-    {
-      id: 2,
-      top: "40%",
-      left: "50%",
-      description: "Описание для второй точки",
-    },
-    {
-      id: 3,
-      top: "70%",
-      left: "45%",
-      description: "Описание для третьей точки",
-    },
-  ];
+const MotionBox = motion(Box);
+const MotionVStack = motion(VStack);
+export const Hero: React.FC<Props> = ({}) => {
+  const MotionButton = motion(Button);
 
   return (
-    <Box p={"60px"}>
+    <Box py={["30px", "80px"]} id="section1">
       <Container maxW={"container.xl"}>
         <HStack
           alignItems={"center"}
-          justifyContent={"space-between"}
-          mt={"-30px"}
+          justifyContent={{ base: "center", md: "space-between" }}
+          mt={["0px", "-30px"]}
+          flexDirection={{ base: "column", md: "row" }} // Колонка на мобильных, строка на десктопах
+          textAlign={{ base: "center", md: "left" }} // Центровка текста для мобильных
         >
-          <VStack alignItems={"start"} w={"50%"}>
-            <Badge color={"white"} bgColor={"blue"} p={"8px"} mb={"20px"}>
+          {/* Анимация текста */}
+          <MotionVStack
+            alignItems={{ base: "center", md: "start" }} // Центровка текста на мобильных
+            w={{ base: "100%", md: "50%" }} // Полная ширина на мобильных
+            mt={{ base: "0", md: "-20px" }} // Убираем отрицательный отступ на мобильных
+            px={{ base: "20px", md: "0" }} // Отступы по бокам на мобильных
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <Badge
+              color={"white"}
+              bgColor={"#0F89D3"}
+              p={"15px"}
+              mb={"10px"}
+              fontSize={{ base: "xs", md: "sm" }} // Меньший размер шрифта на мобильных
+              fontWeight={600}
+            >
               #ALLES-IN-EINEM
             </Badge>
-            <HighlightedText /> -
-            <Heading fontSize={"6xl"} fontWeight={600}>Ich bin dein Mittel für alles.</Heading>
-            <Text fontSize={"lg"}>
+            <Heading
+              fontSize={{ base: "48px", md: "68px" }} // Меньший шрифт на мобильных
+              fontWeight={600}
+              lineHeight={{ base: "1.2" }} // Оптимизация высоты строки
+            >
+              <Text as="span" color="#0F89D3">
+                Monocure
+              </Text>{" "}
+              - Ich bin dein Mittel für alles.
+            </Heading>
+            <Text fontSize={{ base: "md", md: "lg" }} m={['10px 0 ',"10px 0 25px"]}>
               Ein Produkt – Sauberkeit für das ganze Zuhause.
             </Text>
-            <Button variant={"primary"}>Byu now</Button>
-          </VStack>
-          <Box position={"relative"} borderRadius={"20px"} bg="blue.50">
+            <ButtonComp />
+          </MotionVStack>
+
+          {/* Анимация картинки */}
+          <MotionBox
+
+            position={"relative"}
+            borderRadius={"20px"}
+            bg="blue.50"
+            w={{ base: "100%", md: "auto" }} // Полная ширина на мобильных
+            mt={{ base: "60px", md: "0px" }} // Отступ сверху на мобильных
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+          >
             <Image
               src={"/assets/pack.png"}
               alt={"pack"}
               width={600}
-              height={600}
+              height={500}
+              style={{ width: "100%", height: "auto" }} // Адаптивная ширина изображения
             />
-            {points.map((point) => (
-              <Tooltip
-                key={point.id}
-                label={point.description}
-                bg="white"
-                color="black"
-                fontSize={"lg"}
-                hasArrow
-                placement="top"
-              >
-                <Circle
-                  size="40px"
-                  bg="white"
-                  color="blue.500"
-                  position="absolute"
-                  top={point.top}
-                  left={point.left}
-                  transform="translate(-50%, -50%)"
-                  cursor="pointer"
-                  _hover={{ bg: "blue.600" }}
-                >
-                  +
-                </Circle>
-              </Tooltip>
-            ))}
-          </Box>
+          </MotionBox>
         </HStack>
       </Container>
     </Box>

@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/header";
-import { Benefits, Hero, PromoCode } from "@/components/shared";
-import { Box, Container } from "@chakra-ui/react";
+import { Benefits, Hero, PromoCode, Reviews, Use } from "@/components/shared";
 
+import { Box, Container } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -9,8 +9,10 @@ export default function Home() {
       <PromoCode />
       <Header />
       <Hero />
-      <Benefits/>
-
+      <Benefits />
+      <Use />
+      <Reviews />
+      
     </Box>
   );
 }

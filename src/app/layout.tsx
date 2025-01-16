@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '700'], // Укажите нужные веса
+  weight: ['400', '500', '600', '700'], // Укажите нужные веса
   style: ['normal', 'italic'],  // Укажите стили
   display: 'swap',              // Рекомендуется для улучшения рендера
 });
