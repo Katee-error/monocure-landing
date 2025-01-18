@@ -21,6 +21,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Benefits />
+      <AboutProduct/>
       <Using/>
       <Use />
       <Quality />

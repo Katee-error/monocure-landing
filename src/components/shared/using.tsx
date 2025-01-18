@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   className?: string;
@@ -37,6 +38,8 @@ export const Using: React.FC<Props> = ({ className }) => {
 
     return () => observer.disconnect();
   }, []);
+
+  const MotionBox = motion(Box);
 
   return (
     <Box
@@ -66,10 +69,10 @@ export const Using: React.FC<Props> = ({ className }) => {
 
         <Flex
           justifyContent={"space-between"}
-          gap={"20px"}
+          gap={"25px"}
           alignItems={"start"}
         >
-          <Box width="31%">
+          <MotionBox width="31%" whileHover={{ scale: 1.1}}>
             <Box
               width="385px" /* Фиксированная ширина */
               height="240px" /* Фиксированная высота */
@@ -107,9 +110,9 @@ export const Using: React.FC<Props> = ({ className }) => {
                 <Text>Füllen Sie heißes Wasser (60-90 °C) ein.</Text>
               </CardBody>
             </Card>
-          </Box>
+          </MotionBox>
 
-          <Box width="31%">
+          <MotionBox width="31%" whileHover={{ scale: 1.1}}>
             <Box
               width="385px" /* Фиксированная ширина */
               height="240px" /* Фиксированная высота */
@@ -151,9 +154,9 @@ export const Using: React.FC<Props> = ({ className }) => {
                 </Text>
               </CardBody>
             </Card>
-          </Box>
+          </MotionBox>
 
-          <Box width="31%">
+          <MotionBox width="31%"  whileHover={{ scale: 1.1}}>
             <Box
               width="385px" /* Фиксированная ширина */
               height="240px" /* Фиксированная высота */
@@ -195,7 +198,7 @@ export const Using: React.FC<Props> = ({ className }) => {
                 </Text>
               </CardBody>
             </Card>
-          </Box>
+          </MotionBox>
         </Flex>
       </Container>
     </Box>
