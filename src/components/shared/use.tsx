@@ -2,11 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Badge, Box, Container, Heading, Image } from "@chakra-ui/react";
 
-interface Props {
-  className?: string;
-}
-
-export const Use: React.FC<Props> = ({ className }) => {
+export const Use: React.FC = ({}) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef<HTMLDivElement | null>(null);
 

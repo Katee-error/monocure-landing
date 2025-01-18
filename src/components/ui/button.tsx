@@ -3,11 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-interface Props {
-  className?: string;
-}
 
-export const ButtonComp: React.FC<Props> = ({ className }) => {
+export const ButtonComp: React.FC = ({}) => {
   const MotionButton = motion(Button);
   return (
     <Link

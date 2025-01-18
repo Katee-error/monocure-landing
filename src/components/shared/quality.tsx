@@ -10,12 +10,9 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { ButtonComp } from "../ui";
+import { ButtonComp } from "./../ui/button";
 import { motion } from "framer-motion";
 
-interface Props {
-  className?: string;
-}
 const useMethod = [
   {
     id: 1,
@@ -49,7 +46,7 @@ const useMethod = [
   },
 ];
 
-export const Quality: React.FC<Props> = ({ className }) => {
+export const Quality: React.FC = ({}) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef<HTMLDivElement | null>(null);
 

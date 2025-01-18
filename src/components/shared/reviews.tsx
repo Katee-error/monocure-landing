@@ -15,10 +15,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-interface Props {
-  className?: string;
-}
-
 const testimonials = [
   {
     id: 1,
@@ -78,7 +74,7 @@ const testimonials = [
   },
 ];
 
-export const Reviews: React.FC<Props> = ({ className }) => {
+export const Reviews: React.FC = ({}) => {
   const [expanded, setExpanded] = useState({});
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
@@ -112,8 +108,8 @@ export const Reviews: React.FC<Props> = ({ className }) => {
 
   return (
     <Box
-    // bg={'blue.25'}
-    id="section5"
+      // bg={'blue.25'}
+      id="section5"
       py={["40px", "60px"]}
       ref={ref}
       opacity={isVisible ? 1 : 0}

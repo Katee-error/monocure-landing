@@ -17,24 +17,11 @@ import { motion } from "framer-motion";
 import { ButtonComp } from "../ui/button";
 import { CirclePlay } from "lucide-react";
 
-interface Props {
-  className?: string;
-}
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
-export const Hero: React.FC<Props> = ({}) => {
-  const MotionButton = motion(Button);
-
+export const Hero: React.FC = ({}) => {
   return (
-    <Box
-      pt={["30px", "60px"]}
-      pb={"80px"}
-      id="section1"
-      // bg="url('/assets/bg/e.png')"
-      // bgPosition="left top"
-      // bgRepeat="no-repeat"
-      // bgSize="contain"
-    >
+    <Box pt={["30px", "60px"]} pb={"80px"} id="section1">
       <Container maxW={"container.xl"}>
         <HStack
           alignItems={"center"}

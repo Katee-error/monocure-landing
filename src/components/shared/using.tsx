@@ -13,11 +13,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-interface Props {
-  className?: string;
-}
-
-export const Using: React.FC<Props> = ({ className }) => {
+export const Using: React.FC = ({}) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef<HTMLDivElement | null>(null);
 

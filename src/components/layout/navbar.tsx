@@ -1,20 +1,15 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
 import React from "react";
-import { Link as ChakraLink,Flex } from "@chakra-ui/react";
+import { Link as ChakraLink, Flex } from "@chakra-ui/react";
 
-interface Props {
-  className?: string;
-}
-
-export const Navbar: React.FC<Props> = ({ className }) => {
+export const Navbar: React.FC = ({}) => {
   return (
     <nav>
       <Flex
         as={"nav"}
         color={"black"}
-        gap={'15px'}
-        // mb={"-15px"}
+        gap={"15px"}
         fontWeight={600}
         fontSize={"sm"}
       >
@@ -22,7 +17,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
           to="section1"
           smooth={true}
           duration={500}
-          offset={-120} // Если есть фиксированный header, учитываем его высоту
+          offset={-120} 
         >
           <ChakraLink
             cursor="pointer"

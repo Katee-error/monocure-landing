@@ -7,7 +7,6 @@ import {
   Box,
   Container,
   Flex,
-  Button,
   Drawer,
   DrawerBody,
   DrawerHeader,
@@ -24,13 +23,8 @@ import { AlignJustify } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as ChakraLink } from "@chakra-ui/react";
 
-interface Props {
-  className?: string;
-}
-
-export const Header: React.FC<Props> = ({ className }) => {
+export const Header: React.FC = ({}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const MotionButton = motion(Button);
   return (
     <Box
       id="sticky-nav"

@@ -14,10 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-interface Props {
-  className?: string;
-}
-
 const cardsBenefits = [
   {
     id: 1,
@@ -43,13 +39,12 @@ const cardsBenefits = [
   },
 ];
 
-export const Benefits: React.FC<Props> = ({ className }) => {
+export const Benefits: React.FC = ({}) => {
   const MotionCard = motion(Card);
 
   return (
     <Box
       pb={"60px"}
-      // bgGradient="linear(to-b, #fff 37.5%, rgba(52, 137, 200, 0.86) 100%)"
     >
       <Container maxW={"container.xl"}>
         <Heading textAlign="center" mb="8" display={["block", "none"]}>
@@ -118,7 +113,11 @@ export const Benefits: React.FC<Props> = ({ className }) => {
                       Tierversuche.
                     </Text>
                   </VStack>
-                  <Image src={"/assets/benefits/plant.png"} w={"40px"} alt="benefits" />
+                  <Image
+                    src={"/assets/benefits/plant.png"}
+                    w={"40px"}
+                    alt="benefits"
+                  />
                 </Flex>
               </CardBody>
             </MotionCard>
@@ -144,7 +143,11 @@ export const Benefits: React.FC<Props> = ({ className }) => {
                       Sauberkeit ohne
                     </Text>
                   </VStack>
-                  <Image src={"/assets/benefits/easy.png"} w={"40px"} alt="benefits" />
+                  <Image
+                    src={"/assets/benefits/easy.png"}
+                    w={"40px"}
+                    alt="benefits"
+                  />
                 </Flex>
               </CardBody>
             </MotionCard>
