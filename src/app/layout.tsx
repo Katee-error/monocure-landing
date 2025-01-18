@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Укажите нужные веса
-  style: ["normal", "italic"], // Укажите стили
-  display: "swap", // Рекомендуется для улучшения рендера
+  weight: ["400", "500", "600", "700"], 
+  style: ["normal", "italic"], 
+  display: "swap", 
 });
 
 export const metadata: Metadata = {
