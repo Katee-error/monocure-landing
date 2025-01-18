@@ -75,13 +75,13 @@ const testimonials = [
 ];
 
 export const Reviews: React.FC = ({}) => {
-  const [expanded, setExpanded] = useState({});
+  const [expanded, setExpanded] = useState<Record<string | number, boolean>>({});
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  const toggleReadMore = (id) => {
+  const toggleReadMore = (id: string | number) => {
     setExpanded((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [id]: !prev[id] || false, 
     }));
   };
 
