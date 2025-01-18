@@ -29,9 +29,9 @@ export const Use: React.FC<Props> = ({ className }) => {
   }, []);
   return (
     <Box
-      h={"800px"}
-      py={"60px"}
-      m={"40px 0 80px"}
+      // h={"800px"}
+      // py={"60px"}
+      m={"40px 0 0px"}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}

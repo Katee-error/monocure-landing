@@ -9,6 +9,7 @@ import {
   Quality,
   Reviews,
   Use,
+  Using,
 } from "@/components/shared";
 
 import { Box, Container } from "@chakra-ui/react";
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Benefits />
+      <Using/>
       <Use />
       <Quality />
       <Reviews />

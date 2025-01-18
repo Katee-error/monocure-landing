@@ -15,7 +15,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 export const Footer: React.FC = () => {
   return (
-    <Box bg="blue.50" py={{ base: "40px", md: "60px" }}>
+    <Box bg="blue.25" py={{ base: "40px", md: "60px" }}>
       <Container maxW="container.xl">
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -41,6 +41,7 @@ export const Footer: React.FC = () => {
             alignItems="center"
             gap={['15px',"30px"]}
             fontWeight={500}
+            color={'black'}
           >
             <ScrollLink
               to="section1"
@@ -51,7 +52,7 @@ export const Footer: React.FC = () => {
               <ChakraLink
                 cursor="pointer"
                 _hover={{ color: "blue.700" }}
-                color="#0F89D3"
+                // color="#0F89D3"
               >
                 Startseite
               </ChakraLink>
@@ -60,7 +61,7 @@ export const Footer: React.FC = () => {
               <ChakraLink
                 cursor="pointer"
                 _hover={{ color: "blue.700" }}
-                color="#0F89D3"
+                // color="#0F89D3"
               >
                 Über uns
               </ChakraLink>
@@ -69,7 +70,7 @@ export const Footer: React.FC = () => {
               <ChakraLink
                 cursor="pointer"
                 _hover={{ color: "blue.700" }}
-                color="#0F89D3"
+                // color="#0F89D3"
               >
                  Anwendung
               </ChakraLink>
@@ -78,7 +79,7 @@ export const Footer: React.FC = () => {
               <ChakraLink
                 cursor="pointer"
                 _hover={{ color: "blue.700" }}
-                color="#0F89D3"
+                // color="#0F89D3"
               >
                 Vorher/Nachher
               </ChakraLink>
@@ -87,7 +88,7 @@ export const Footer: React.FC = () => {
               <ChakraLink
                 cursor="pointer"
                 _hover={{ color: "blue.700" }}
-                color="#0F89D3"
+                // color="#0F89D3"
               >
                 Bewertungen
               </ChakraLink>

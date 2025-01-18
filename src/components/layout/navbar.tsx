@@ -14,7 +14,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
         as={"nav"}
         color={"black"}
         gap={'15px'}
-        mb={"-15px"}
+        // mb={"-15px"}
         fontWeight={600}
         fontSize={"sm"}
       >

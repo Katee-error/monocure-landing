@@ -20,7 +20,7 @@ export const ButtonComp: React.FC<Props> = ({ className }) => {
       <MotionButton
         p={{ base: "10px 20px", md: "25px" }}
         borderRadius="25px"
-        mb={"-15px"}
+        // mb={"-15px"}
         fontSize={{ base: "14px", md: "sm" }}
         fontWeight={500}
         color="white"

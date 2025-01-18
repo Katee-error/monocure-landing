@@ -114,9 +114,9 @@ export const Reviews: React.FC<Props> = ({ className }) => {
 
   return (
     <Box
-    // bg={'blue.50'}
+    bg={'blue.25'}
     id="section5"
-      py={["40px", "80px"]}
+      py={["40px", "40px"]}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}

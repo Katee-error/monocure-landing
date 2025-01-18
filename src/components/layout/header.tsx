@@ -42,7 +42,6 @@ export const Header: React.FC<Props> = ({ className }) => {
       zIndex="sticky"
       bg="white"
       boxShadow="sm"
-      
       transition="all 0.3s ease-in-out"
     >
       <Container maxW="container.xl">
@@ -53,9 +52,11 @@ export const Header: React.FC<Props> = ({ className }) => {
           alignItems="center"
           display={{ base: "none", md: "flex" }}
         >
-          <Link href="/">
-            <Image src={logo} alt="logo" sizes="140px" />
-          </Link>
+          <Box mt="-20px">
+            <Link href="/">
+              <Image src={logo} alt="logo" sizes="130px" />
+            </Link>
+          </Box>
           <Navbar />
           <ButtonComp />
         </Flex>

@@ -84,7 +84,7 @@ export const Hero: React.FC<Props> = ({}) => {
             >
               Ein Produkt – Sauberkeit für das ganze Zuhause.
             </Text>
-            <Flex alignItems={"baceline"} gap={"20px"}>
+            <Flex alignItems={"center"} gap={"20px"}>
               <ButtonComp />
               <Link
                 href="https://www.amazon.de/vdp/161b96e0ec2340599ede75659da925d7?ref=dp_vse_ibvc0"
