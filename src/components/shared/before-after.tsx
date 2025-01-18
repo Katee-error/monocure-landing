@@ -31,17 +31,17 @@ export const BeforeAfter: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Удалить наблюдатель после срабатывания
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.2 } // Срабатывает, если 20% блока в области видимости
+      { threshold: 0.2 } 
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect(); // Очистка
+    return () => observer.disconnect(); 
   }, []);
 
   const settings: SliderSettings = {
@@ -97,7 +97,7 @@ export const BeforeAfter: React.FC = () => {
         <Button
           position="absolute"
           top="60%"
-          left={{ base: "10px", md: "20" }} // Адаптивное положение
+          left={{ base: "10px", md: "20" }} 
           transform="translateY(-50%)"
           zIndex="1"
           bg="#0F89D3"
@@ -105,8 +105,8 @@ export const BeforeAfter: React.FC = () => {
           borderRadius="50px"
           boxShadow="md"
           _hover={{ bg: "blue.600" }}
-          onClick={() => sliderRef.current?.slickPrev()} // Метод для переключения назад
-          size={{ base: "sm", md: "md" }} // Уменьшаем кнопку для мобильных
+          onClick={() => sliderRef.current?.slickPrev()} 
+          size={{ base: "sm", md: "md" }} 
         >
           <ChevronLeft />
         </Button>
@@ -118,7 +118,7 @@ export const BeforeAfter: React.FC = () => {
               <Flex
                 justifyContent="center"
                 alignItems="center"
-                flexDirection={{ base: "column", md: "row" }} // Колонки на мобильных
+                flexDirection={{ base: "column", md: "row" }}
                 display="flex"
                 gap="20px"
                 pb={'30px'}
@@ -145,7 +145,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }} // Адаптивная высота
+                    height={{ base: "300px", md: "350px" }} 
                     objectFit="cover"
                   />
                 </Box>
@@ -172,7 +172,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }} // Адаптивная высота
+                    height={{ base: "300px", md: "350px" }} 
                     objectFit="cover"
                   />
                 </Box>
@@ -185,7 +185,7 @@ export const BeforeAfter: React.FC = () => {
         <Button
           position="absolute"
           top="60%"
-          right={{ base: "10px", md: "20" }} // Адаптивное положение
+          right={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"
           bg="#0F89D3"
@@ -193,8 +193,8 @@ export const BeforeAfter: React.FC = () => {
           borderRadius="full"
           boxShadow="md"
           _hover={{ bg: "blue.600" }}
-          onClick={() => sliderRef.current?.slickNext()} // Метод для переключения вперед
-          size={{ base: "sm", md: "md" }} // Уменьшаем кнопку для мобильных
+          onClick={() => sliderRef.current?.slickNext()} 
+          size={{ base: "sm", md: "md" }} 
         >
           <ChevronRight />
         </Button>
