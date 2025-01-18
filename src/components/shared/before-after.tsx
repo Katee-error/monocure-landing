@@ -31,17 +31,17 @@ export const BeforeAfter: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
-      { threshold: 0.2 } 
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect(); 
+    return () => observer.disconnect();
   }, []);
 
   const settings: SliderSettings = {
@@ -53,11 +53,9 @@ export const BeforeAfter: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    
   };
   const sliderRef = useRef<Slider | null>(null);
 
-  // Данные для слайдов
   const slides = [
     {
       before: "/assets/after-before/1-bf.jpg",
@@ -79,9 +77,9 @@ export const BeforeAfter: React.FC = () => {
 
   return (
     <Box
-    id="section4"
+      id="section4"
       py={["20px", "50px"]}
-      mb={'40px'}
+      mb={"40px"}
       position="relative"
       ref={ref}
       opacity={isVisible ? 1 : 0}
@@ -97,7 +95,7 @@ export const BeforeAfter: React.FC = () => {
         <Button
           position="absolute"
           top="60%"
-          left={{ base: "10px", md: "20" }} 
+          left={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"
           bg="#0F89D3"
@@ -105,23 +103,23 @@ export const BeforeAfter: React.FC = () => {
           borderRadius="50px"
           boxShadow="md"
           _hover={{ bg: "blue.600" }}
-          onClick={() => sliderRef.current?.slickPrev()} 
-          size={{ base: "sm", md: "md" }} 
+          onClick={() => sliderRef.current?.slickPrev()}
+          size={{ base: "sm", md: "md" }}
         >
           <ChevronLeft />
         </Button>
 
         {/* Слайдер */}
-        <Slider {...settings} ref={sliderRef} >
+        <Slider {...settings} ref={sliderRef}>
           {slides.map((slide, index) => (
-            <Box key={index} overflow="visible" >
+            <Box key={index} overflow="visible">
               <Flex
                 justifyContent="center"
                 alignItems="center"
                 flexDirection={{ base: "column", md: "row" }}
                 display="flex"
                 gap="20px"
-                pb={'30px'}
+                pb={"30px"}
               >
                 {/* Фото "До" */}
                 <Box
@@ -145,7 +143,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }} 
+                    height={{ base: "300px", md: "350px" }}
                     objectFit="cover"
                   />
                 </Box>
@@ -172,7 +170,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }} 
+                    height={{ base: "300px", md: "350px" }}
                     objectFit="cover"
                   />
                 </Box>
@@ -193,8 +191,8 @@ export const BeforeAfter: React.FC = () => {
           borderRadius="full"
           boxShadow="md"
           _hover={{ bg: "blue.600" }}
-          onClick={() => sliderRef.current?.slickNext()} 
-          size={{ base: "sm", md: "md" }} 
+          onClick={() => sliderRef.current?.slickNext()}
+          size={{ base: "sm", md: "md" }}
         >
           <ChevronRight />
         </Button>

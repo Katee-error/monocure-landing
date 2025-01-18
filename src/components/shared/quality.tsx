@@ -95,7 +95,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
           observer.disconnect(); // Удалить наблюдатель после срабатывания
         }
       },
-      { threshold: 0.2 } // Срабатывает, если 20% блока в области видимости
+      { threshold: 0.3 } // Срабатывает, если 20% блока в области видимости
     );
 
     if (ref.current) {

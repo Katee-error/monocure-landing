@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import { Badge, Box, Container, Heading, Image } from "@chakra-ui/react";
 
@@ -18,7 +18,7 @@ export const Use: React.FC<Props> = ({ className }) => {
           observer.disconnect(); // Удалить наблюдатель после срабатывания
         }
       },
-      { threshold: 0.2 } // Срабатывает, если 20% блока в области видимости
+      { threshold: 0.3 } // Срабатывает, если 20% блока в области видимости
     );
 
     if (ref.current) {
@@ -29,14 +29,11 @@ export const Use: React.FC<Props> = ({ className }) => {
   }, []);
   return (
     <Box
-      // h={"800px"}
-      // py={"60px"}
       m={"40px 0 0px"}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
-    
     >
       <Container maxW={"container.xl"}>
         <Box textAlign={["center"]}>

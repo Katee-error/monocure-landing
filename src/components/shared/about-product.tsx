@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Badge, Box, Container, Text } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 interface Props {
@@ -35,7 +35,6 @@ export const AboutProduct: React.FC<Props> = ({ className }) => {
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
-    
     >
       <Container maxW={"container.xl"}>
         <Box borderRadius={"20px"} p={"25px 40px"}>

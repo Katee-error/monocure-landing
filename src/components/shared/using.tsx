@@ -29,7 +29,7 @@ export const Using: React.FC<Props> = ({ className }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
