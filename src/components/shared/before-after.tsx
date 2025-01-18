@@ -53,6 +53,7 @@ export const BeforeAfter: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    
   };
   const sliderRef = useRef<Slider | null>(null);
 
@@ -80,6 +81,7 @@ export const BeforeAfter: React.FC = () => {
     <Box
     id="section4"
       py={["20px", "50px"]}
+      mb={'40px'}
       position="relative"
       ref={ref}
       opacity={isVisible ? 1 : 0}
@@ -95,7 +97,7 @@ export const BeforeAfter: React.FC = () => {
         <Button
           position="absolute"
           top="60%"
-          left={{ base: "10px", md: "10" }} // Адаптивное положение
+          left={{ base: "10px", md: "20" }} // Адаптивное положение
           transform="translateY(-50%)"
           zIndex="1"
           bg="#0F89D3"
@@ -110,20 +112,21 @@ export const BeforeAfter: React.FC = () => {
         </Button>
 
         {/* Слайдер */}
-        <Slider {...settings} ref={sliderRef}>
+        <Slider {...settings} ref={sliderRef} >
           {slides.map((slide, index) => (
-            <Box key={index} overflow="visible">
+            <Box key={index} overflow="visible" >
               <Flex
-                justifyContent="space-between"
+                justifyContent="center"
                 alignItems="center"
                 flexDirection={{ base: "column", md: "row" }} // Колонки на мобильных
                 display="flex"
                 gap="20px"
+                pb={'30px'}
               >
                 {/* Фото "До" */}
                 <Box
                   textAlign="center"
-                  width={{ base: "100%", md: "45%" }}
+                  width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
                   <Badge
@@ -142,7 +145,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "400px" }} // Адаптивная высота
+                    height={{ base: "300px", md: "350px" }} // Адаптивная высота
                     objectFit="cover"
                   />
                 </Box>
@@ -150,7 +153,7 @@ export const BeforeAfter: React.FC = () => {
                 {/* Фото "После" */}
                 <Box
                   textAlign="center"
-                  width={{ base: "100%", md: "45%" }}
+                  width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
                   <Badge
@@ -169,7 +172,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "400px" }} // Адаптивная высота
+                    height={{ base: "300px", md: "350px" }} // Адаптивная высота
                     objectFit="cover"
                   />
                 </Box>
@@ -182,7 +185,7 @@ export const BeforeAfter: React.FC = () => {
         <Button
           position="absolute"
           top="60%"
-          right={{ base: "10px", md: "10" }} // Адаптивное положение
+          right={{ base: "10px", md: "20" }} // Адаптивное положение
           transform="translateY(-50%)"
           zIndex="1"
           bg="#0F89D3"
