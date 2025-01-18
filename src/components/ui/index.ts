@@ -1,1 +1,0 @@
-export { ButtonComp } from "./button";

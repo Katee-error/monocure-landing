@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -43,7 +43,6 @@ export const Using: React.FC<Props> = ({ className }) => {
 
   return (
     <Box
-      // bg={'gray.100'}
       py={"60px"}
       ref={ref}
       opacity={isVisible ? 1 : 0}
@@ -57,7 +56,7 @@ export const Using: React.FC<Props> = ({ className }) => {
             bgColor={"#0F89D3"}
             p={"15px"}
             mb={"10px"}
-            fontSize={{ base: "xs", md: "sm" }} // Smaller font size on mobile
+            fontSize={{ base: "xs", md: "sm" }}
             fontWeight={600}
           >
             #Verwendung
@@ -72,11 +71,11 @@ export const Using: React.FC<Props> = ({ className }) => {
           gap={"25px"}
           alignItems={"start"}
         >
-          <MotionBox width="31%" whileHover={{ scale: 1.1}}>
+          <MotionBox width="31%" whileHover={{ scale: 1.1 }}>
             <Box
-              width="385px" /* Фиксированная ширина */
-              height="240px" /* Фиксированная высота */
-              overflow="hidden" /* Убираем всё, что выходит за границы */
+              width="385px"
+              height="240px"
+              overflow="hidden"
               borderRadius="10px"
             >
               <Image
@@ -87,7 +86,7 @@ export const Using: React.FC<Props> = ({ className }) => {
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover", // Сохраняем пропорции
+                  objectFit: "cover",
                 }}
               />
             </Box>
@@ -99,7 +98,6 @@ export const Using: React.FC<Props> = ({ className }) => {
               mt={"-30px"}
               justifyContent={"center"}
               bgColor={"white"}
-              // border={"1px solid #0F89D3"}
               color={"white"}
               bg="white"
               borderRadius={"0 0 10px 10px"}
@@ -112,11 +110,11 @@ export const Using: React.FC<Props> = ({ className }) => {
             </Card>
           </MotionBox>
 
-          <MotionBox width="31%" whileHover={{ scale: 1.1}}>
+          <MotionBox width="31%" whileHover={{ scale: 1.1 }}>
             <Box
-              width="385px" /* Фиксированная ширина */
-              height="240px" /* Фиксированная высота */
-              overflow="hidden" /* Убираем всё, что выходит за границы */
+              width="385px"
+              height="240px"
+              overflow="hidden"
               borderRadius="10px"
             >
               {" "}
@@ -128,7 +126,7 @@ export const Using: React.FC<Props> = ({ className }) => {
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover", // Сохраняем пропорции
+                  objectFit: "cover",
                 }}
               />
             </Box>
@@ -140,7 +138,6 @@ export const Using: React.FC<Props> = ({ className }) => {
               mt={"-30px"}
               justifyContent={"center"}
               bgColor={"white"}
-              // border={"1px solid #0F89D3"}
               color={"white"}
               bg="white"
               borderRadius={"0 0 10px 10px"}
@@ -156,7 +153,7 @@ export const Using: React.FC<Props> = ({ className }) => {
             </Card>
           </MotionBox>
 
-          <MotionBox width="31%"  whileHover={{ scale: 1.1}}>
+          <MotionBox width="31%" whileHover={{ scale: 1.1 }}>
             <Box
               width="385px" /* Фиксированная ширина */
               height="240px" /* Фиксированная высота */

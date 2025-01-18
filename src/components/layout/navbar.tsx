@@ -1,7 +1,7 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
 import React from "react";
-import { Link as ChakraLink, Box, Flex, Link } from "@chakra-ui/react";
+import { Link as ChakraLink,Flex } from "@chakra-ui/react";
 
 interface Props {
   className?: string;

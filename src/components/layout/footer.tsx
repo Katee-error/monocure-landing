@@ -8,8 +8,6 @@ import {
   Link as ChakraLink,
   Image,
   Heading,
-  Text,
-  Stack,
 } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -39,9 +37,9 @@ export const Footer: React.FC = () => {
           <Flex
             direction={{ base: "column", md: "row" }}
             alignItems="center"
-            gap={['15px',"30px"]}
+            gap={["15px", "30px"]}
             fontWeight={500}
-            color={'black'}
+            color={"black"}
           >
             <ScrollLink
               to="section1"
@@ -72,7 +70,7 @@ export const Footer: React.FC = () => {
                 _hover={{ color: "blue.700" }}
                 // color="#0F89D3"
               >
-                 Anwendung
+                Anwendung
               </ChakraLink>
             </ScrollLink>
             <ScrollLink to="section4" smooth={true} duration={700} offset={-80}>

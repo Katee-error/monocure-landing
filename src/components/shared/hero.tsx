@@ -8,18 +8,14 @@ import {
   Button,
   HStack,
   Badge,
-  Circle,
-  Tooltip,
   Link,
   Flex,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import { HighlightedText } from "../ui/heading";
 import { motion } from "framer-motion";
 import { ButtonComp } from "../ui/button";
 import { CirclePlay } from "lucide-react";
-import { Header } from "../layout/header";
 
 interface Props {
   className?: string;
@@ -32,14 +28,13 @@ export const Hero: React.FC<Props> = ({}) => {
   return (
     <Box
       pt={["30px", "60px"]}
-      pb={'80px'}
+      pb={"80px"}
       id="section1"
       // bg="url('/assets/bg/e.png')"
       // bgPosition="left top"
       // bgRepeat="no-repeat"
       // bgSize="contain"
     >
-      
       <Container maxW={"container.xl"}>
         <HStack
           alignItems={"center"}

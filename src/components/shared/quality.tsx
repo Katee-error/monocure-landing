@@ -2,13 +2,9 @@
 import {
   Badge,
   Box,
-  CardBody,
   Container,
   Flex,
   Heading,
-  SimpleGrid,
-  VStack,
-  Card,
   Text,
   Grid,
 } from "@chakra-ui/react";
@@ -51,36 +47,6 @@ const useMethod = [
     title: "SILBERSULFID",
     img: "/assets/use/6.png",
   },
-  // {
-  //   id: 7,
-  //   title: "SILBERSULFID",
-  //   img: "/assets/use/7.png",
-  // },
-  // {
-  //   id: 8,
-  //   title: "SILBERSULFID",
-  //   img: "/assets/use/8.png",
-  // },
-  // {
-  //   id: 9,
-  //   title: "SILBERSULFID",
-  //   img: "/assets/use/9.png",
-  // },
-  //   {
-  //     id: 10,
-  //     title: "SILBERSULFID",
-  //     img: "/assets/use/10.png",
-  //   },
-  //   {
-  //     id: 11,
-  //     title: "SILBERSULFID",
-  //     img: "/assets/use/11.png",
-  //   },
-  //   {
-  //     id: 12,
-  //     title: "SILBERSULFID",
-  //     img: "/assets/use/12.png",
-  //   },
 ];
 
 export const Quality: React.FC<Props> = ({ className }) => {
@@ -108,9 +74,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
   return (
     <Box
       id="section3"
-      // bg={'blue.25'}
       py={["40px", "60px"]}
-      // my={'40px'}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
@@ -121,10 +85,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
           justifyContent={"space-between"}
           gap={"20px"}
           alignItems={"center"}
-          //   boxShadow="1px 2px 5px 0 rgba(0, 0, 0, 0.2)"
           borderRadius={"20px"}
-          // p={"30px 40px"}
-          //   bg={'white'}
         >
           <Box w={"50%"}>
             <Badge

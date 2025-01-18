@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 interface Props {
   className?: string;
 }
@@ -20,7 +20,6 @@ export const ButtonComp: React.FC<Props> = ({ className }) => {
       <MotionButton
         p={{ base: "10px 20px", md: "25px" }}
         borderRadius="25px"
-        // mb={"-15px"}
         fontSize={{ base: "14px", md: "sm" }}
         fontWeight={500}
         color="white"
@@ -30,7 +29,7 @@ export const ButtonComp: React.FC<Props> = ({ className }) => {
         whileHover={{ scale: 1.05 }}
       >
         Auf Amazon kaufen
-        <ArrowRight style={{marginLeft: '10px'}}/>
+        <ArrowRight style={{ marginLeft: "10px" }} />
       </MotionButton>
     </Link>
   );
