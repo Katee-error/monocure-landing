@@ -83,7 +83,7 @@ export const Benefits: React.FC<Props> = ({ className }) => {
                       {benefit.description}
                     </Text>
                   </VStack>
-                  <Image src={benefit.img} w={"40px"} />
+                  <Image src={benefit.img} w={"40px"} alt="benefits" />
                 </Flex>
               </CardBody>
             </MotionCard>
@@ -118,7 +118,7 @@ export const Benefits: React.FC<Props> = ({ className }) => {
                       Tierversuche.
                     </Text>
                   </VStack>
-                  <Image src={"/assets/benefits/plant.png"} w={"40px"} />
+                  <Image src={"/assets/benefits/plant.png"} w={"40px"} alt="benefits" />
                 </Flex>
               </CardBody>
             </MotionCard>
@@ -144,7 +144,7 @@ export const Benefits: React.FC<Props> = ({ className }) => {
                       Sauberkeit ohne
                     </Text>
                   </VStack>
-                  <Image src={"/assets/benefits/easy.png"} w={"40px"} />
+                  <Image src={"/assets/benefits/easy.png"} w={"40px"} alt="benefits" />
                 </Flex>
               </CardBody>
             </MotionCard>

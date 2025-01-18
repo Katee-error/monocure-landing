@@ -171,7 +171,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
                 >
                   <Image
                     src={use.img}
-                    alt=""
+                    alt="using"
                     width={120}
                     height={120}
                     style={{

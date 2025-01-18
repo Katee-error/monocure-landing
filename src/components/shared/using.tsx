@@ -81,7 +81,7 @@ export const Using: React.FC<Props> = ({ className }) => {
             >
               <Image
                 src={"/assets/gallery/kattle.png"}
-                alt={""}
+                alt={"kattle"}
                 width={300}
                 height={120}
                 style={{
@@ -122,7 +122,7 @@ export const Using: React.FC<Props> = ({ className }) => {
               {" "}
               <Image
                 src={"/assets/gallery/2.JPG"}
-                alt={""}
+                alt={"hands"}
                 width={300}
                 height={120}
                 style={{
@@ -166,7 +166,7 @@ export const Using: React.FC<Props> = ({ className }) => {
               {" "}
               <Image
                 src={"/assets/gallery/3.JPG"}
-                alt={""}
+                alt={"hands"}
                 width={300}
                 height={120}
                 style={{

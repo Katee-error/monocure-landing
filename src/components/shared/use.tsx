@@ -55,7 +55,7 @@ export const Use: React.FC<Props> = ({ className }) => {
 
       <Image
         src={"/assets/gallery/use.png"}
-        alt={""}
+        alt={"using"}
         width={"100%"}
         h={"100%"}
         objectFit={"contain"}
