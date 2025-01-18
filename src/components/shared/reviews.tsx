@@ -76,7 +76,7 @@ const testimonials = [
 
 export const Reviews: React.FC = ({}) => {
   const [expanded, setExpanded] = useState<Record<string | number, boolean>>({});
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
 
   const toggleReadMore = (id: string | number) => {
     setExpanded((prev) => ({
