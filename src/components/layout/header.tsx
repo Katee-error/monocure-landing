@@ -40,7 +40,7 @@ export const Header: React.FC<Props> = ({ className }) => {
       zIndex="sticky"
       w="100%"
       transition="0.3s"
-      bg={"white"}
+      // bg={"white"}
       opacity={"95%"}
     >
       <Container maxW="container.xl">

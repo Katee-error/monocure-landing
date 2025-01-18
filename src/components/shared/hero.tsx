@@ -11,12 +11,15 @@ import {
   Circle,
   Tooltip,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { HighlightedText } from "../ui/heading";
 import { motion } from "framer-motion";
 import { ButtonComp } from "../ui/button";
+import { CirclePlay } from "lucide-react";
+import { Header } from "../layout/header";
 
 interface Props {
   className?: string;
@@ -27,7 +30,16 @@ export const Hero: React.FC<Props> = ({}) => {
   const MotionButton = motion(Button);
 
   return (
-    <Box py={["30px", "80px"]} id="section1">
+    <Box
+      pt={["30px", "60px"]}
+      pb={'80px'}
+      id="section1"
+      // bg="url('/assets/bg/e.png')"
+      // bgPosition="left top"
+      // bgRepeat="no-repeat"
+      // bgSize="contain"
+    >
+      
       <Container maxW={"container.xl"}>
         <HStack
           alignItems={"center"}
@@ -39,7 +51,7 @@ export const Hero: React.FC<Props> = ({}) => {
           {/* Анимация текста */}
           <MotionVStack
             alignItems={{ base: "center", md: "start" }} // Центровка текста на мобильных
-            w={{ base: "100%", md: "50%" }} // Полная ширина на мобильных
+            w={{ base: "100%", md: "65%" }} // Полная ширина на мобильных
             mt={{ base: "0", md: "-20px" }} // Убираем отрицательный отступ на мобильных
             px={{ base: "20px", md: "0" }} // Отступы по бокам на мобильных
             initial={{ x: "-100%", opacity: 0 }}
@@ -48,7 +60,7 @@ export const Hero: React.FC<Props> = ({}) => {
           >
             <Badge
               color={"white"}
-              bgColor={"#0F89D3"}
+              bgColor={"red"}
               p={"15px"}
               mb={"10px"}
               fontSize={{ base: "xs", md: "sm" }} // Меньший размер шрифта на мобильных
@@ -57,27 +69,42 @@ export const Hero: React.FC<Props> = ({}) => {
               #ALLES-IN-EINEM
             </Badge>
             <Heading
-              fontSize={{ base: "48px", md: "68px" }} // Меньший шрифт на мобильных
+              fontSize={{ base: "48px", md: "70px" }} // Меньший шрифт на мобильных
               fontWeight={600}
-              lineHeight={{ base: "1.2" }} // Оптимизация высоты строки
+              lineHeight={["1.2", "1.1"]} // Оптимизация высоты строки
             >
               <Text as="span" color="#0F89D3">
                 Monocure
-              </Text>{" "}
+              </Text>
               - Ich bin dein Mittel für alles.
             </Heading>
-            <Text fontSize={{ base: "md", md: "lg" }} m={['10px 0 ',"10px 0 25px"]}>
+            <Text
+              fontSize={{ base: "md", md: "md" }}
+              m={["10px 0 ", "10px 0 25px"]}
+            >
               Ein Produkt – Sauberkeit für das ganze Zuhause.
             </Text>
-            <ButtonComp />
+            <Flex alignItems={"baceline"} gap={"20px"}>
+              <ButtonComp />
+              <Link
+                href="https://www.amazon.de/vdp/161b96e0ec2340599ede75659da925d7?ref=dp_vse_ibvc0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>
+                  <Text>Hoe het werkt</Text>
+                  <CirclePlay size={30} style={{ marginLeft: "10px" }} />
+                </Button>
+              </Link>
+            </Flex>
           </MotionVStack>
 
           {/* Анимация картинки */}
           <MotionBox
-
+            // py={'20px'}
             position={"relative"}
             borderRadius={"20px"}
-            bg="blue.50"
+            // bg="blue.50"
             w={{ base: "100%", md: "auto" }} // Полная ширина на мобильных
             mt={{ base: "60px", md: "0px" }} // Отступ сверху на мобильных
             initial={{ scale: 0, opacity: 0 }}
@@ -87,9 +114,9 @@ export const Hero: React.FC<Props> = ({}) => {
             <Image
               src={"/assets/pack.png"}
               alt={"pack"}
-              width={600}
-              height={500}
-              style={{ width: "100%", height: "auto" }} // Адаптивная ширина изображения
+              width={700}
+              height={600}
+              style={{ width: "100%", height: "auto", marginTop: "40px" }} // Адаптивная ширина изображения
             />
           </MotionBox>
         </HStack>

@@ -12,7 +12,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
     <nav>
       <Flex
         as={"nav"}
-        gap={"10px"}
+        gap={"5px"}
         color={"black"}
         mb={"-15px"}
         fontWeight={600}

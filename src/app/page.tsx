@@ -1,5 +1,14 @@
 import { Header } from "@/components/layout/header";
-import { Benefits, Hero, PromoCode, Reviews, Use } from "@/components/shared";
+import {
+  AboutProduct,
+  BeforeAfter,
+  Benefits,
+  Hero,
+  PromoCode,
+  Quality,
+  Reviews,
+  Use,
+} from "@/components/shared";
 
 import { Box, Container } from "@chakra-ui/react";
 
@@ -11,8 +20,9 @@ export default function Home() {
       <Hero />
       <Benefits />
       <Use />
+      <Quality />
       <Reviews />
-      
+      <BeforeAfter />
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Text,
@@ -8,10 +8,15 @@ import {
   HStack,
   Button,
   Avatar,
+  Container,
+  Badge,
+  Card,
+  CardBody,
 } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+
 interface Props {
   className?: string;
 }
@@ -77,6 +82,7 @@ const testimonials = [
 
 export const Reviews: React.FC<Props> = ({ className }) => {
   const [expanded, setExpanded] = useState({});
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const toggleReadMore = (id) => {
     setExpanded((prev) => ({
@@ -85,52 +91,106 @@ export const Reviews: React.FC<Props> = ({ className }) => {
     }));
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = React.useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Удалить наблюдатель после срабатывания
+        }
+      },
+      { threshold: 0.2 } // Срабатывает, если 20% блока в области видимости
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect(); // Очистка
+  }, []);
+
   return (
-    <Box py="80px">
-      <Heading textAlign="center" mb="8">
-        Was unsere Kunden sagen
-      </Heading>
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        breakpoints={{ 768: { slidesPerView: 3 } }}
-      >
-        {testimonials.map((testimonial) => (
-          <SwiperSlide key={testimonial.id}>
-            <Box bg="white" p="6" borderRadius="lg" boxShadow="md">
-              <HStack spacing="4">
-                <Avatar src={testimonial.avatar} name={testimonial.name} />
-                <VStack align="start" spacing="1">
-                  <Heading fontSize="md" fontWeight="bold">
-                    {testimonial.name}
-                  </Heading>
-                  <HStack>
-                    {[...Array(testimonial.rating)].map((_, index) => (
-                      <Text key={index} color="yellow.400" fontSize="lg">
-                        ★
-                      </Text>
-                    ))}
-                  </HStack>
-                </VStack>
-              </HStack>
-              <Text mt="4" fontSize="sm" color="gray.600">
-                {expanded[testimonial.id]
-                  ? testimonial.text
-                  : `${testimonial.text.slice(0, 80)}...`}
-              </Text>
-              <Button
-                mt="4"
-                size="sm"
-                variant="link"
-                color="blue.500"
-                onClick={() => toggleReadMore(testimonial.id)}
+    <Box
+    // bg={'blue.50'}
+      py={["40px", "80px"]}
+      ref={ref}
+      opacity={isVisible ? 1 : 0}
+      transform={isVisible ? "translateY(0)" : "translateY(50px)"}
+      transition="opacity 0.8s ease-out, transform 0.6s ease-out"
+    >
+      <Container maxW={"container.xl"}>
+        <Box textAlign={["center", "start"]}>
+          <Badge
+            color={"white"}
+            bgColor={"#0F89D3"}
+            p={"15px"}
+            mb={"10px"}
+            fontSize={{ base: "xs", md: "sm" }} // Меньший размер шрифта на мобильных
+            fontWeight={600}
+          >
+            #Reviews
+          </Badge>
+          <Heading textAlign="start" mb="40px">
+            Was unsere Kunden sagen
+          </Heading>
+        </Box>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{ 768: { slidesPerView: 3 } }}
+          style={{
+            overflow: isMobile ? "hidden" : "visible",
+          }}
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <Card
+                bg="white"
+                borderRadius={"10px"}
+                boxShadow="md"
+                alignItems={"start"}
               >
-                {expanded[testimonial.id] ? "Show less" : "Read more"}
-              </Button>
-            </Box>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+                <CardBody>
+                  <HStack
+                    alignItems={"center"}
+                    justifyContent={"space-between"}
+                    spacing="5"
+                  >
+                    <Heading fontSize="md" fontWeight="bold">
+                      {testimonial.name}
+                    </Heading>
+                    <HStack>
+                      {[...Array(testimonial.rating)].map((_, index) => (
+                        <Text key={index} color="blue.600" fontSize="lg">
+                          ★
+                        </Text>
+                      ))}
+                    </HStack>
+                  </HStack>
+
+                  <Text mt="4" fontSize="sm" color="gray.600">
+                    {expanded[testimonial.id]
+                      ? testimonial.text
+                      : `${testimonial.text.slice(0, 260)}...`}
+                  </Text>
+                  <Button
+                    mt="4"
+                    size="sm"
+                    textAlign={"start"}
+                    color="blue.500"
+                    onClick={() => toggleReadMore(testimonial.id)}
+                  >
+                    {expanded[testimonial.id] ? "Show less" : "Read more"}
+                  </Button>
+                </CardBody>
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>{" "}
+      </Container>
     </Box>
   );
 };
