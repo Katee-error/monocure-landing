@@ -78,6 +78,7 @@ export const BeforeAfter: React.FC = () => {
 
   return (
     <Box
+    id="section4"
       py={["20px", "50px"]}
       position="relative"
       ref={ref}

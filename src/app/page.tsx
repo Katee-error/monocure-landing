@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import {
   AboutProduct,
@@ -23,6 +24,7 @@ export default function Home() {
       <Quality />
       <Reviews />
       <BeforeAfter />
+      <Footer/>
     </Box>
   );
 }

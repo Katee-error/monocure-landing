@@ -35,24 +35,26 @@ export const Header: React.FC<Props> = ({ className }) => {
   return (
     <Box
       id="sticky-nav"
-      py={"30px"}
+      py="30px"
+      w="100%"
+      position="sticky"
       top="0"
       zIndex="sticky"
-      w="100%"
-      transition="0.3s"
-      // bg={"white"}
-      opacity={"95%"}
+      bg="white"
+      boxShadow="sm"
+      
+      transition="all 0.3s ease-in-out"
     >
       <Container maxW="container.xl">
         {/* DESKTOP */}
         <Flex
-          as={"header"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
+          as="header"
+          justifyContent="space-between"
+          alignItems="center"
           display={{ base: "none", md: "flex" }}
         >
-          <Link href={"/"}>
-            <Image src={logo} alt="logo" sizes={"140px"} />
+          <Link href="/">
+            <Image src={logo} alt="logo" sizes="140px" />
           </Link>
           <Navbar />
           <ButtonComp />
@@ -60,18 +62,17 @@ export const Header: React.FC<Props> = ({ className }) => {
 
         {/* MOBILE */}
         <Flex
-          as={"header"}
-          justifyContent={"space-between"}
+          as="header"
+          justifyContent="space-between"
           alignItems={["baseline", "center"]}
           display={{ base: "flex", md: "none" }}
-        
         >
-          <Link href={"/"}>
-            <Image src={logo} alt="logo" sizes={"100px"} />
+          <Link href="/">
+            <Image src={logo} alt="logo" sizes="100px" />
           </Link>
           {/* Кнопка-бургер */}
           <IconButton
-            mt={"10px"}
+            mt="10px"
             icon={<AlignJustify size={30} />}
             aria-label="Open Menu"
             variant="solid"
@@ -88,21 +89,26 @@ export const Header: React.FC<Props> = ({ className }) => {
           <DrawerHeader>Menu</DrawerHeader>
 
           <DrawerBody>
-            <Flex flexDirection="column" gap="40px" mt={"20px"} alignItems={'center'}>
+            <Flex
+              flexDirection="column"
+              gap="40px"
+              mt="20px"
+              alignItems="center"
+            >
               <ScrollLink
                 to="section1"
                 smooth={true}
                 duration={500}
-                offset={-120} // Если есть фиксированный header, учитываем его высоту
+                offset={-120}
               >
                 <ChakraLink
-                onClick={onClose}
+                  onClick={onClose}
                   mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border={"1px solid #667085"}
-                  p={"10px 20px "}
-                  borderRadius={"50px"}
+                  border="1px solid #667085"
+                  p="10px 20px"
+                  borderRadius="50px"
                 >
                   Startseite
                 </ChakraLink>
@@ -114,13 +120,13 @@ export const Header: React.FC<Props> = ({ className }) => {
                 offset={-80}
               >
                 <ChakraLink
-                onClick={onClose}
+                  onClick={onClose}
                   mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border={"1px solid #667085"}
-                  p={"10px 20px "}
-                  borderRadius={"50px"}
+                  border="1px solid #667085"
+                  p="10px 20px"
+                  borderRadius="50px"
                 >
                   Über uns
                 </ChakraLink>
@@ -132,31 +138,31 @@ export const Header: React.FC<Props> = ({ className }) => {
                 offset={-80}
               >
                 <ChakraLink
-                onClick={onClose}
+                  onClick={onClose}
                   mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border={"1px solid #667085"}
-                  p={"10px 20px "}
-                  borderRadius={"50px"}
+                  border="1px solid #667085"
+                  p="10px 20px"
+                  borderRadius="50px"
                 >
                   Unser produkt
                 </ChakraLink>
               </ScrollLink>
               <ScrollLink
-                to="section3"
+                to="section4"
                 smooth={true}
                 duration={700}
                 offset={-80}
               >
                 <ChakraLink
-                onClick={onClose}
+                  onClick={onClose}
                   mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border={"1px solid #667085"}
-                  p={"10px 20px "}
-                  borderRadius={"50px"}
+                  border="1px solid #667085"
+                  p="10px 20px"
+                  borderRadius="50px"
                 >
                   Produkt details
                 </ChakraLink>

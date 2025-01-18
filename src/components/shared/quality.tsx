@@ -107,6 +107,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
   const MotionBox = motion(Box);
   return (
     <Box
+    id="section3"
       bg={'blue.50'}
       py={["40px", "80px"]}
       ref={ref}
