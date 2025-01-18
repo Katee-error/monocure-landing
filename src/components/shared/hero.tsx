@@ -79,7 +79,7 @@ export const Hero: React.FC = ({}) => {
               >
                 <Button>
                   <Text>Hoe het werkt</Text>
-                  <CirclePlay  size={30} style={{ marginLeft: "10px", borderColor: 'black' }} />
+                  <CirclePlay  size={30} style={{ marginLeft: "10px", color: "black"  }} />
                 </Button>
               </Link>
             </Flex>

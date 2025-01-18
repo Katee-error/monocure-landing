@@ -27,7 +27,7 @@ export const Header: React.FC = ({}) => {
   return (
     <Box
       id="sticky-nav"
-      py={['15px',"30px"]}
+      py={["15px", "30px"]}
       w="100%"
       position="sticky"
       top="0"
@@ -69,6 +69,7 @@ export const Header: React.FC = ({}) => {
             icon={<AlignJustify size={30} />}
             aria-label="Open Menu"
             variant="solid"
+            color={"black"}
             onClick={onOpen}
           />
         </Flex>
