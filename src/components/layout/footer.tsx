@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           justifyContent="space-between"
-          alignItems="center"
+          alignItems="baceline"
           gap={{ base: "30px", md: "20px" }}
         >
           {/* Логотип */}
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                 _hover={{ color: "blue.700" }}
                 color="#0F89D3"
               >
-                Unser produkt
+                 Anwendung
               </ChakraLink>
             </ScrollLink>
             <ScrollLink to="section4" smooth={true} duration={700} offset={-80}>
@@ -80,7 +80,16 @@ export const Footer: React.FC = () => {
                 _hover={{ color: "blue.700" }}
                 color="#0F89D3"
               >
-                Produkt details
+                Vorher/Nachher
+              </ChakraLink>
+            </ScrollLink>
+            <ScrollLink to="section5" smooth={true} duration={700} offset={-80}>
+              <ChakraLink
+                cursor="pointer"
+                _hover={{ color: "blue.700" }}
+                color="#0F89D3"
+              >
+                Bewertungen
               </ChakraLink>
             </ScrollLink>
           </Flex>
