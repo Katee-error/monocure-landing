@@ -16,7 +16,6 @@ import {
   useDisclosure,
   IconButton,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { ButtonComp } from "../ui/button";
 import { Navbar } from "./navbar";
 import { AlignJustify } from "lucide-react";
