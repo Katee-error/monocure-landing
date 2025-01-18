@@ -21,21 +21,21 @@ const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
 export const Hero: React.FC = ({}) => {
   return (
-    <Box pt={["30px", "60px"]} pb={"80px"} id="section1">
+    <Box pt={["30px", "60px"]} pb={["40px", "80px"]} id="section1">
       <Container maxW={"container.xl"}>
         <HStack
           alignItems={"center"}
           justifyContent={{ base: "center", md: "space-between" }}
           mt={["0px", "-30px"]}
-          flexDirection={{ base: "column", md: "row" }} // Колонка на мобильных, строка на десктопах
-          textAlign={{ base: "center", md: "left" }} // Центровка текста для мобильных
+          flexDirection={{ base: "column", md: "row" }} // Column on mobile, row on desktop
+          textAlign={{ base: "center", md: "left" }} // Center text on mobile
         >
-          {/* Анимация текста */}
+          {/* Text Animation */}
           <MotionVStack
-            alignItems={{ base: "center", md: "start" }} // Центровка текста на мобильных
-            w={{ base: "100%", md: "65%" }} // Полная ширина на мобильных
-            mt={{ base: "0", md: "-20px" }} // Убираем отрицательный отступ на мобильных
-            px={{ base: "20px", md: "0" }} // Отступы по бокам на мобильных
+            alignItems={{ base: "center", md: "start" }} // Center text on mobile
+            w={{ base: "100%", md: "65%" }} // Full width on mobile
+            mt={{ base: "20px", md: "-20px" }} // Adjust margin on mobile
+            px={{ base: "20px", md: "0" }} // Padding on mobile
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -45,15 +45,15 @@ export const Hero: React.FC = ({}) => {
               bgColor={"red"}
               p={"15px"}
               mb={"10px"}
-              fontSize={{ base: "xs", md: "sm" }} // Меньший размер шрифта на мобильных
+              fontSize={{ base: "xs", md: "sm" }} // Smaller font size on mobile
               fontWeight={600}
             >
               #ALLES-IN-EINEM
             </Badge>
             <Heading
-              fontSize={{ base: "48px", md: "70px" }} // Меньший шрифт на мобильных
+              fontSize={{ base: "48px", md: "70px" }} // Smaller font size on mobile
               fontWeight={600}
-              lineHeight={["1.2", "1.1"]} // Оптимизация высоты строки
+              lineHeight={["1.2", "1.1"]} // Line height optimization
             >
               <Text as="span" color="#0F89D3">
                 Monocure
@@ -66,7 +66,11 @@ export const Hero: React.FC = ({}) => {
             >
               Ein Produkt – Sauberkeit für das ganze Zuhause.
             </Text>
-            <Flex alignItems={"center"} gap={"20px"}>
+            <Flex
+              alignItems={"center"}
+              gap={"20px"}
+              flexDirection={{ base: "column", md: "row" }}
+            >
               <ButtonComp />
               <Link
                 href="https://www.amazon.de/vdp/161b96e0ec2340599ede75659da925d7?ref=dp_vse_ibvc0"
@@ -81,14 +85,12 @@ export const Hero: React.FC = ({}) => {
             </Flex>
           </MotionVStack>
 
-          {/* Анимация картинки */}
+          {/* Image Animation */}
           <MotionBox
-            // py={'20px'}
             position={"relative"}
             borderRadius={"20px"}
-            // bg="blue.50"
-            w={{ base: "100%", md: "auto" }} // Полная ширина на мобильных
-            mt={{ base: "60px", md: "0px" }} // Отступ сверху на мобильных
+            w={{ base: "100%", md: "auto" }} // Full width on mobile
+            mt={{ base: "40px", md: "0px" }} // Margin top adjustment for mobile
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
@@ -98,7 +100,11 @@ export const Hero: React.FC = ({}) => {
               alt={"pack"}
               width={700}
               height={600}
-              style={{ width: "100%", height: "auto", marginTop: "40px" }} // Адаптивная ширина изображения
+              style={{
+                width: "100%", // Full width image on mobile
+                height: "auto", // Maintain aspect ratio
+                marginTop: "20px", // Adjust margin top for mobile
+              }}
             />
           </MotionBox>
         </HStack>

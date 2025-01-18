@@ -27,7 +27,7 @@ export const Header: React.FC = ({}) => {
   return (
     <Box
       id="sticky-nav"
-      py="30px"
+      py={['15px',"30px"]}
       w="100%"
       position="sticky"
       top="0"
@@ -46,7 +46,7 @@ export const Header: React.FC = ({}) => {
         >
           <Box mt="-20px">
             <Link href="/">
-              <Image src={logo} alt="logo" sizes="130px" />
+              <Image src={logo} alt="logo" sizes={"130px"} />
             </Link>
           </Box>
           <Navbar />

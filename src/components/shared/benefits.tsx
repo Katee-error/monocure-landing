@@ -92,7 +92,7 @@ export const Benefits: React.FC = ({}) => {
             alignContent="center" // Вертикальное центрирование содержимого
           >
             <MotionCard
-              w={"360px"}
+              w={['100%',"360px"]}
               maxW="md"
               h={"130px"}
               justifyContent={"center"}
@@ -122,7 +122,7 @@ export const Benefits: React.FC = ({}) => {
               </CardBody>
             </MotionCard>
             <MotionCard
-              w={"360px"}
+               w={['100%',"360px"]}
               maxW="md"
               h={"130px"}
               justifyContent={"center"}

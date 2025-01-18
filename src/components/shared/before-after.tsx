@@ -94,7 +94,7 @@ export const BeforeAfter: React.FC = () => {
         {/* Кнопка "Назад" */}
         <Button
           position="absolute"
-          top="60%"
+          top={['60%',"60%"]}
           left={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"
@@ -143,7 +143,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }}
+                    height={{ base: "250px", md: "350px" }}
                     objectFit="cover"
                   />
                 </Box>
@@ -170,7 +170,7 @@ export const BeforeAfter: React.FC = () => {
                     borderRadius="md"
                     boxShadow="md"
                     width="100%"
-                    height={{ base: "300px", md: "350px" }}
+                    height={{ base: "250px", md: "350px" }}
                     objectFit="cover"
                   />
                 </Box>
@@ -182,7 +182,7 @@ export const BeforeAfter: React.FC = () => {
         {/* Кнопка "Вперед" */}
         <Button
           position="absolute"
-          top="60%"
+          top={['60%',"60%"]}
           right={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"

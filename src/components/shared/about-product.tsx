@@ -25,8 +25,8 @@ export const AboutProduct: React.FC = ({}) => {
   }, []);
   return (
     <Box
-      my={"40px"}
-      textAlign={"center"}
+      my={['10px',"40px"]}
+      textAlign={["center"]}
       id="section2"
       ref={ref}
       opacity={isVisible ? 1 : 0}
@@ -34,7 +34,7 @@ export const AboutProduct: React.FC = ({}) => {
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
     >
       <Container maxW={"container.xl"}>
-        <Box borderRadius={"20px"} p={"25px 40px"}>
+        
           <Box textAlign={["center"]}>
             <Badge
               color={"white"}
@@ -47,7 +47,7 @@ export const AboutProduct: React.FC = ({}) => {
               #Über das Produkt
             </Badge>
           </Box>
-          <Text fontSize={"2xl"}>
+          <Text fontSize={['md',"2xl"]}>
             Wir haben ein universelles Reinigungsmittel entwickelt, das Ihr
             zuverlässiger Helfer im Kampf gegen Verschmutzungen wird. Es
             entfernt effektiv organische Flecken wie Fett, Speisereste,
@@ -61,7 +61,7 @@ export const AboutProduct: React.FC = ({}) => {
             und Sicherheit. Probieren Sie es aus und überzeugen Sie sich selbst
             von seinen hervorragenden Eigenschaften!
           </Text>
-        </Box>
+     
       </Container>
     </Box>
   );
