@@ -161,6 +161,7 @@ export const Header: React.FC = ({}) => {
                   Produkt details
                 </ChakraLink>
               </ScrollLink>
+              <ButtonComp/>
             </Flex>
           </DrawerBody>
         </DrawerContent>
