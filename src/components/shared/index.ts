@@ -7,3 +7,4 @@ export { Use } from "./use";
 export { Using } from "./using";
 export { Quality } from "./quality";
 export { AboutProduct } from "./about-product";
+export { CookieBanner } from "./cookie-banner";
