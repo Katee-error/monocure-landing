@@ -22,7 +22,7 @@ export const PromoCode: React.FC = () => {
   };
 
   return (
-    <Box bgColor={"#0F89D3"} textAlign={"center"} p={5}>
+    <Box bgColor={"#0F89D3"} textAlign={"center"} p={3}>
       <Container maxW={"container.xl"}>
         <Flex
           alignItems="center"
