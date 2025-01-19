@@ -13,13 +13,29 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ButtonComp } from "../ui/button";
 import { CirclePlay } from "lucide-react";
 
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
+
+const isMobile =
+  typeof window !== "undefined" &&
+  window.matchMedia("(max-width: 768px)").matches;
 export const Hero: React.FC = ({}) => {
+  const [isAnimationEnabled, setIsAnimationEnabled] = useState(!isMobile);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsAnimationEnabled(!window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Box pt={["30px", "60px"]} pb={["40px", "80px"]} id="section1">
       <Container maxW={"container.xl"}>
@@ -94,9 +110,11 @@ export const Hero: React.FC = ({}) => {
             borderRadius={"20px"}
             w={{ base: "100%", md: "auto" }} // Full width on mobile
             mt={{ base: "40px", md: "0px" }} // Margin top adjustment for mobile
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+            initial={isAnimationEnabled ? { scale: 0, opacity: 0 } : {}}
+            animate={isAnimationEnabled ? { scale: 1, opacity: 1 } : {}}
+            transition={
+              isAnimationEnabled ? { duration: 1.8, ease: "easeOut" } : {}
+            }
           >
             <Image
               src={"/assets/pack.webp"}
