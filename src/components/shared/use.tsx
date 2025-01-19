@@ -50,7 +50,7 @@ export const Use: React.FC = ({}) => {
       </Container>
 
       <Image
-        src={"/assets/gallery/use.png"}
+        src={"/assets/gallery/use.webp"}
         alt={"using"}
         width={"100%"}
         h={"100%"}

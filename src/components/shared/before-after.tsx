@@ -58,20 +58,20 @@ export const BeforeAfter: React.FC = () => {
 
   const slides = [
     {
-      before: "/assets/after-before/1-bf.jpg",
-      after: "/assets/after-before/1-af.jpg",
+      before: "/assets/after-before/1-bf.webp",
+      after: "/assets/after-before/1-af.webp",
     },
     {
-      before: "/assets/after-before/2-bf.jpg",
-      after: "/assets/after-before/2-af.jpg",
+      before: "/assets/after-before/2-bf.webp",
+      after: "/assets/after-before/2-af.webp",
     },
     {
-      before: "/assets/after-before/3-bf.jpg",
-      after: "/assets/after-before/3-af.jpg",
+      before: "/assets/after-before/3-bf.webp",
+      after: "/assets/after-before/3-af.webp",
     },
     {
-      before: "/assets/after-before/4-bf.jpg",
-      after: "/assets/after-before/4-af.jpg",
+      before: "/assets/after-before/4-bf.webp",
+      after: "/assets/after-before/4-af.webp",
     },
   ];
 
@@ -94,7 +94,7 @@ export const BeforeAfter: React.FC = () => {
         {/* Кнопка "Назад" */}
         <Button
           position="absolute"
-          top={['60%',"60%"]}
+          top={["60%", "60%"]}
           left={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"
@@ -182,7 +182,7 @@ export const BeforeAfter: React.FC = () => {
         {/* Кнопка "Вперед" */}
         <Button
           position="absolute"
-          top={['60%',"60%"]}
+          top={["60%", "60%"]}
           right={{ base: "10px", md: "20" }}
           transform="translateY(-50%)"
           zIndex="1"

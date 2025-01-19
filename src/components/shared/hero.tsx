@@ -79,7 +79,10 @@ export const Hero: React.FC = ({}) => {
               >
                 <Button>
                   <Text>Hoe het werkt</Text>
-                  <CirclePlay  size={30} style={{ marginLeft: "10px", color: "black"  }} />
+                  <CirclePlay
+                    size={30}
+                    style={{ marginLeft: "10px", color: "black" }}
+                  />
                 </Button>
               </Link>
             </Flex>
@@ -96,7 +99,7 @@ export const Hero: React.FC = ({}) => {
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
           >
             <Image
-              src={"/assets/pack.png"}
+              src={"/assets/pack.webp"}
               alt={"pack"}
               width={700}
               height={600}

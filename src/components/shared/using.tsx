@@ -46,7 +46,7 @@ export const Using: React.FC = ({}) => {
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
     >
       <Container maxW="container.xl">
-        <Box textAlign={['center', 'start']}>
+        <Box textAlign={["center", "start"]}>
           <Badge
             color={"white"}
             bgColor={"#0F89D3"}
@@ -81,7 +81,7 @@ export const Using: React.FC = ({}) => {
               borderRadius="10px"
             >
               <Image
-                src={"/assets/gallery/kattle.png"}
+                src={"/assets/gallery/kattle.webp"}
                 alt={"kattle"}
                 width={300}
                 height={120}
@@ -96,7 +96,7 @@ export const Using: React.FC = ({}) => {
             <Card
               w={"100%"}
               maxW="md"
-              h={['100%',"140px"]}
+              h={["100%", "140px"]}
               mt={"-30px"}
               justifyContent={"center"}
               bgColor={"white"}
@@ -124,7 +124,7 @@ export const Using: React.FC = ({}) => {
               borderRadius="10px"
             >
               <Image
-                src={"/assets/gallery/2.JPG"}
+                src={"/assets/gallery/2.webp"}
                 alt={"hands"}
                 width={300}
                 height={120}
@@ -166,7 +166,7 @@ export const Using: React.FC = ({}) => {
               borderRadius="10px"
             >
               <Image
-                src={"/assets/gallery/3.JPG"}
+                src={"/assets/gallery/3.webp"}
                 alt={"hands"}
                 width={300}
                 height={120}

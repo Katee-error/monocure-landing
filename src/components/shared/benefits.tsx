@@ -20,7 +20,7 @@ const cardsBenefits = [
     title: "Sicherheit für die ganze Familie",
     description:
       "Formel auf Basis von Natriumpercarbonat, ohne Chlor und Phosphate.",
-    img: "/assets/benefits/protect.png",
+    img: "/assets/benefits/protect.webp",
   },
 
   {
@@ -28,14 +28,14 @@ const cardsBenefits = [
     title: "Vielseitigkeit",
     description:
       "Wirksam gegen alle Verschmutzungen. Ideal für Haushalt, Kleidung und Oberflächen.",
-    img: "/assets/benefits/water.png",
+    img: "/assets/benefits/water.webp",
   },
   {
     id: 3,
     title: "Höchste Qualität",
     description:
       "Hergestellt in Deutschland für maximale Zuverlässigkeit und Effektivität.",
-    img: "/assets/benefits/germany.png",
+    img: "/assets/benefits/germany.webp",
   },
 ];
 
@@ -43,9 +43,7 @@ export const Benefits: React.FC = ({}) => {
   const MotionCard = motion(Card);
 
   return (
-    <Box
-      pb={"60px"}
-    >
+    <Box pb={"60px"}>
       <Container maxW={"container.xl"}>
         <Heading textAlign="center" mb="8" display={["block", "none"]}>
           Warum man uns wählt
@@ -92,7 +90,7 @@ export const Benefits: React.FC = ({}) => {
             alignContent="center" // Вертикальное центрирование содержимого
           >
             <MotionCard
-              w={['100%',"360px"]}
+              w={["100%", "360px"]}
               maxW="md"
               h={"130px"}
               justifyContent={"center"}
@@ -114,7 +112,7 @@ export const Benefits: React.FC = ({}) => {
                     </Text>
                   </VStack>
                   <Image
-                    src={"/assets/benefits/plant.png"}
+                    src={"/assets/benefits/plant.webp"}
                     w={"40px"}
                     alt="benefits"
                   />
@@ -122,7 +120,7 @@ export const Benefits: React.FC = ({}) => {
               </CardBody>
             </MotionCard>
             <MotionCard
-               w={['100%',"360px"]}
+              w={["100%", "360px"]}
               maxW="md"
               h={"130px"}
               justifyContent={"center"}
@@ -144,7 +142,7 @@ export const Benefits: React.FC = ({}) => {
                     </Text>
                   </VStack>
                   <Image
-                    src={"/assets/benefits/easy.png"}
+                    src={"/assets/benefits/easy.webp"}
                     w={"40px"}
                     alt="benefits"
                   />
