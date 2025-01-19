@@ -46,7 +46,7 @@ export const Header: React.FC = ({}) => {
         >
           <Box mt="-20px">
             <Link href="/">
-              <Image src={logo} alt="logo" sizes={"130px"} />
+              <Image src={logo} alt="logo" height={40} width={130} />
             </Link>
           </Box>
           <Navbar />
@@ -61,7 +61,7 @@ export const Header: React.FC = ({}) => {
           display={{ base: "flex", md: "none" }}
         >
           <Link href="/">
-            <Image src={logo} alt="logo" sizes="100px" />
+            <Image src={logo} alt="logo" height={40} width={110}  />
           </Link>
           {/* Кнопка-бургер */}
           <IconButton

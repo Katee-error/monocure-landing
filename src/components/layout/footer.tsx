@@ -13,7 +13,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 export const Footer: React.FC = () => {
   return (
-    <Box bg="blue.25" py={{ base: "40px", md: "60px" }}>
+    <Box bg="blue.25" py={{ base: "10px", md: "60px" }}>
       <Container maxW="container.xl">
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -27,7 +27,8 @@ export const Footer: React.FC = () => {
               <Image
                 src={"/assets/logo.svg"}
                 alt="logo"
-                maxW="140px"
+                height={20}
+                width={120}
                 mx="auto"
               />
             </ChakraLink>

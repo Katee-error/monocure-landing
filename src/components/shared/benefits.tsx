@@ -76,7 +76,12 @@ export const Benefits: React.FC = ({}) => {
                       {benefit.description}
                     </Text>
                   </VStack>
-                  <Image src={benefit.img} w={"40px"} alt="benefits" />
+                  <Image
+                    src={benefit.img}
+                    width={"40px"}
+                    height={"40px"}
+                    alt="benefits"
+                  />
                 </Flex>
               </CardBody>
             </MotionCard>
@@ -113,7 +118,8 @@ export const Benefits: React.FC = ({}) => {
                   </VStack>
                   <Image
                     src={"/assets/benefits/plant.webp"}
-                    w={"40px"}
+                    width={"40px"}
+                    height={"40px"}
                     alt="benefits"
                   />
                 </Flex>
@@ -143,7 +149,8 @@ export const Benefits: React.FC = ({}) => {
                   </VStack>
                   <Image
                     src={"/assets/benefits/easy.webp"}
-                    w={"40px"}
+                    width={"40px"}
+                    height={"40px"}
                     alt="benefits"
                   />
                 </Flex>
