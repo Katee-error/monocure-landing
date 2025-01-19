@@ -21,7 +21,7 @@ export const CookieBanner: React.FC = () => {
         color="black"
         p={6}
         textAlign="start"
-        w={"30%"}
+        w={['100%',"30%"]}
         position="relative"
         shadow="lg"
         border="1px solid #e2e8f0"
