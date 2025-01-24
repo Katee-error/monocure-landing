@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://product.monocure.ee",
+    url: "https://cleaner.monocure.ee",
     title: "Monocure",
     description: "All-in-one solution",
     siteName: "Monocure",
