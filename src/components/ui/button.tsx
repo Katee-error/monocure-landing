@@ -4,6 +4,16 @@ import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const handleAmazonClick = () => {
+  
+  const pixelId = "pxl"; 
+  fbq('track', 'Purchase', {
+    content_name: 'Amazon Product',
+    value: 100, 
+    currency: '', 
+    pixel_id: pixelId, 
+  });
+};
 export const ButtonComp: React.FC = ({}) => {
   const MotionButton = motion(Button);
   return (
@@ -13,6 +23,7 @@ export const ButtonComp: React.FC = ({}) => {
       }
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleAmazonClick}
     >
       <MotionButton
         p={{ base: "10px 20px", md: "25px" }}
@@ -31,3 +42,7 @@ export const ButtonComp: React.FC = ({}) => {
     </Link>
   );
 };
+function fbq(arg0: string, arg1: string, arg2: { content_name: string; value: number; currency: string; pixel_id: string; }) {
+  throw new Error("Function not implemented.");
+}
+

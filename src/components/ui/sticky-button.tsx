@@ -1,6 +1,17 @@
 import {  Button, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+const handleAmazonClick = () => {
+  
+  const pixelId = "pxl"; 
+  fbq('track', 'Purchase', {
+    content_name: 'Amazon Product',
+    value: 100, 
+    currency: '', 
+    pixel_id: pixelId, 
+  });
+};
 export const StickyButton = () => {
   return (
     <Link
@@ -9,6 +20,7 @@ export const StickyButton = () => {
       }
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleAmazonClick}
     >
       <Flex
         position="fixed"
@@ -29,3 +41,11 @@ export const StickyButton = () => {
     </Link>
   );
 };
+function fbq(arg0: string, arg1: string, arg2: {
+  content_name: string; value: number; 
+  currency: string; 
+  pixel_id: string;
+}) {
+  throw new Error("Function not implemented.");
+}
+
