@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <Box>
       <Hero /> 
+      <VideoReview />
       <BeforeAfter />
-      <VideoReview/>
       <Use />
       <Quality />
       <Reviews />
