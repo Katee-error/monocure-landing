@@ -13,7 +13,8 @@ const VideoReview = () => {
           controls
           muted 
           autoPlay
-          style={{ width: '100%' }}
+          loop
+          style={{ width: '100%', objectFit: 'cover' }}
         />
       </AspectRatio>
     </Box>
