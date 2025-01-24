@@ -9,7 +9,7 @@ const VideoReview = () => {
       <AspectRatio ratio={16 / 9} maxW="80%" mx="auto">
         <iframe
           title="Video Übersicht"
-          // src="/assets/video/monocure.mp4"
+          src="/assets/video/monocure.mp4"
           allowFullScreen
           allow="mute"
           
