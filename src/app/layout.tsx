@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Monocure",
     description: "All-in-one solution",
-    images: "/src/app/opengraph-image.png",
+    images: "/opengraph-image.png",
   },
   openGraph: {
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "All-in-one solution",
     siteName: "Monocure",
     images: {
-      url: "/src/app/opengraph-image.png",
+      url: "/opengraph-image.png",
     },
   },
 };
