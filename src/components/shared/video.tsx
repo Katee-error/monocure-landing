@@ -12,8 +12,10 @@ const VideoReview = () => {
           src="/assets/video/monocure.mp4"
           muted
           autoPlay
+          preload="none"
           loop
           controls
+          playsInline
           style={{
             width: "100%",
             maxWidth: "100%",
