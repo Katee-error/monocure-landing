@@ -34,7 +34,7 @@ export const StickyButton = () => {
         zIndex="1000"
         p="10px"
       >
-        <Button width="50%" h='60px' bgColor="#0F89D3" size="md">
+        <Button width={['100%',"50%"]} h='60px' bgColor="#0F89D3" size="md">
         Auf Amazon kaufen
         <ArrowRight style={{ marginLeft: "10px" }} />
         </Button>

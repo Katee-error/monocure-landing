@@ -6,13 +6,14 @@ const VideoReview = () => {
       <Heading textAlign="center" mb={["20px", "40px"]}>
       Video Übersicht
       </Heading>
-      <AspectRatio ratio={16 / 9} maxW="80%" mx="auto">
-        <iframe
+      <AspectRatio ratio={16 / 9} maxW={['100%', '80%']} mx="auto">
+      <video
           title="Video Übersicht"
           src="/assets/video/monocure.mp4"
-          allowFullScreen
-          allow="mute"
-         
+          controls
+          muted 
+          autoPlay
+          style={{ width: '100%' }}
         />
       </AspectRatio>
     </Box>
