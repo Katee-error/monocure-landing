@@ -13,33 +13,6 @@ export const Navbar: React.FC = ({}) => {
         fontWeight={600}
         fontSize={"sm"}
       >
-        <ScrollLink
-          to="section1"
-          smooth={true}
-          duration={500}
-          offset={-120} 
-        >
-          <ChakraLink
-            cursor="pointer"
-            _hover={{ color: "blue.500" }}
-            border={"1px solid #667085"}
-            p={"10px 20px "}
-            borderRadius={"50px"}
-          >
-            Startseite
-          </ChakraLink>
-        </ScrollLink>
-        <ScrollLink to="section2" smooth={true} duration={700} offset={-80}>
-          <ChakraLink
-            cursor="pointer"
-            _hover={{ color: "blue.500" }}
-            border={"1px solid #667085"}
-            p={"10px 20px "}
-            borderRadius={"50px"}
-          >
-            Über uns
-          </ChakraLink>
-        </ScrollLink>
         <ScrollLink to="section3" smooth={true} duration={700} offset={-80}>
           <ChakraLink
             cursor="pointer"

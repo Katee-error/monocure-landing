@@ -60,7 +60,7 @@ export const Header: React.FC = ({}) => {
           display={{ base: "flex", md: "none" }}
         >
           <Link href="/">
-            <Image src={logo} alt="logo" height={40} width={110}  />
+            <Image src={logo} alt="logo" height={40} width={110} />
           </Link>
           {/* Кнопка-бургер */}
           <IconButton
@@ -89,57 +89,19 @@ export const Header: React.FC = ({}) => {
               alignItems="center"
             >
               <ScrollLink
-                to="section1"
-                smooth={true}
-                duration={500}
-                offset={-120}
-              >
-                <ChakraLink
-                  onClick={onClose}
-                  mx={4}
-                  cursor="pointer"
-                  _hover={{ color: "blue.500" }}
-                  border="1px solid #667085"
-                  p="10px 20px"
-                  borderRadius="50px"
-                >
-                  Startseite
-                </ChakraLink>
-              </ScrollLink>
-              <ScrollLink
-                to="section2"
-                smooth={true}
-                duration={700}
-                offset={-80}
-              >
-                <ChakraLink
-                  onClick={onClose}
-                  mx={4}
-                  cursor="pointer"
-                  _hover={{ color: "blue.500" }}
-                  border="1px solid #667085"
-                  p="10px 20px"
-                  borderRadius="50px"
-                >
-                  Über uns
-                </ChakraLink>
-              </ScrollLink>
-              <ScrollLink
                 to="section3"
                 smooth={true}
                 duration={700}
                 offset={-80}
               >
                 <ChakraLink
-                  onClick={onClose}
-                  mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border="1px solid #667085"
-                  p="10px 20px"
-                  borderRadius="50px"
+                  border={"1px solid #667085"}
+                  p={"10px 20px "}
+                  borderRadius={"50px"}
                 >
-                  Unser produkt
+                  Anwendung
                 </ChakraLink>
               </ScrollLink>
               <ScrollLink
@@ -149,18 +111,33 @@ export const Header: React.FC = ({}) => {
                 offset={-80}
               >
                 <ChakraLink
-                  onClick={onClose}
-                  mx={4}
                   cursor="pointer"
                   _hover={{ color: "blue.500" }}
-                  border="1px solid #667085"
-                  p="10px 20px"
-                  borderRadius="50px"
+                  border={"1px solid #667085"}
+                  p={"10px 20px "}
+                  borderRadius={"50px"}
                 >
-                  Produkt details
+                  Vorher/Nachher
                 </ChakraLink>
               </ScrollLink>
-              <ButtonComp/>
+              <ScrollLink
+                to="section5"
+                smooth={true}
+                duration={700}
+                offset={-80}
+              >
+                <ChakraLink
+                  cursor="pointer"
+                  _hover={{ color: "blue.500" }}
+                  border={"1px solid #667085"}
+                  p={"10px 20px "}
+                  borderRadius={"50px"}
+                >
+                  Bewertungen
+                </ChakraLink>
+              </ScrollLink>
+
+              <ButtonComp />
             </Flex>
           </DrawerBody>
         </DrawerContent>
