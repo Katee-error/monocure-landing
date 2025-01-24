@@ -7,6 +7,8 @@ import { CookieBanner, PromoCode } from "@/components/shared";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Box } from "@chakra-ui/react";
+import { StickyButton } from "@/components/ui/sticky-button";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,10 +32,10 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Box display="flex" flexDirection="column" minHeight="100vh">
           <ThemeProvider>
-            <PromoCode />
             <Header />
             <Box flex="1">{children}</Box>
             <Footer />
+            <StickyButton/>
             <CookieBanner />
           </ThemeProvider>
         </Box>

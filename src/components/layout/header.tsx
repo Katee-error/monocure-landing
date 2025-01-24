@@ -50,7 +50,6 @@ export const Header: React.FC = ({}) => {
             </Link>
           </Box>
           <Navbar />
-          <ButtonComp />
         </Flex>
 
         {/* MOBILE */}

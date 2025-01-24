@@ -73,6 +73,30 @@ export const BeforeAfter: React.FC = () => {
       before: "/assets/after-before/4-bf.webp",
       after: "/assets/after-before/4-af.webp",
     },
+    {
+      before: "/assets/after-before/5-bf.webp",
+      after: "/assets/after-before/5-af.webp",
+    },
+    {
+      before: "/assets/after-before/6-bf.webp",
+      after: "/assets/after-before/6-af.webp",
+    },
+    {
+      before: "/assets/after-before/7-bf.webp",
+      after: "/assets/after-before/7-af.webp",
+    },
+    {
+      before: "/assets/after-before/8-bf.webp",
+      after: "/assets/after-before/8-af.webp",
+    },
+    {
+      before: "/assets/after-before/9-bf.webp",
+      after: "/assets/after-before/9-af.webp",
+    },
+    {
+      before: "/assets/after-before/10-bf.webp",
+      after: "/assets/after-before/10-af.webp",
+    },
   ];
 
   return (
