@@ -18,6 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cleaner.monocure.ee"),
   title: "Monocure",
   description: "ALL-IN-ONE solution",
   robots: "index, follow",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Monocure",
     description: "All-in-one solution",
-    images: "/opengraph-image.png",
+    images: "/assets/opengraph-image.png",
   },
   openGraph: {
     type: "website",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description: "All-in-one solution",
     siteName: "Monocure",
     images: {
-      url: "/opengraph-image.png",
+      url: "/assets/opengraph-image.png",
     },
   },
 };
