@@ -2,45 +2,46 @@
 import {
   Box,
   Container,
-  Heading,
-  VStack,
-  Text,
-  Button,
-  HStack,
-  Badge,
-  Link,
-  Flex,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { ButtonComp } from "../ui/button";
-import { CirclePlay } from "lucide-react";
-
-const MotionBox = motion(Box);
-const MotionVStack = motion(VStack);
+const MotionBox = motion(Box); 
 export const Hero: React.FC = ({}) => {
   return (
-    <Box pt={["30px", "20px"]} pb={["40px", "80px"]} id="section1">
+    <Box pt={["30px", "10px"]} pb={["40px", "80px"]}>
       <Container
         maxW={"container.xl"}
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minH="400px"
       >
-        <Box
-          position={"relative"}
-          w={{ base: "100%", md: "auto" }}
-          mt={{ base: "20px", md: "0px" }}
-        >
+     <MotionBox
+        initial={{ opacity: 0, x: -50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1 }}
+      >
           <Image
             src={"/assets/pack.webp"}
             alt={"pack"}
             width={700}
             height={600}
           />
-        </Box>
+        </MotionBox>
+        <MotionBox
+        initial={{ opacity: 0, x: 50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1, delay: 0.5 }} 
+        ml={-500} 
+        zIndex='-1'
+      >
+          <Image
+            src={"/assets/pack-back.png"}
+            alt={"another pack"}
+            width={700}
+            height={600}
+          />
+        </MotionBox>
       </Container>
     </Box>
   );
