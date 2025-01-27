@@ -30,10 +30,9 @@ export const ButtonComp: React.FC = ({}) => {
         p={{ base: "10px 20px", md: "25px" }}
         borderRadius="25px"
         fontSize={{ base: "14px", md: "sm" }}
-        fontWeight={500}
-        color="white"
-        bg="#0F89D3"
-        _hover={{ bgColor: "brand.primary", color: "white" }}
+        fontWeight={600}
+        color="#0F89D3"
+        bg="white"
         boxShadow="1px 2px 5px 0 rgba(0, 0, 0, 0.2)"
         whileHover={{ scale: 1.05 }}
       >

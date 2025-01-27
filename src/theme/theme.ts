@@ -8,7 +8,7 @@ import {
 import { borderRadius } from "./borderRadius";
 import { colors, semanticColors } from "./colors";
 import { Badge } from "./components/Badge.theme";
-import { Heading } from "./components/Heading.theme"
+import { Heading } from "./components/Heading.theme";
 import { Text } from "./components/Text.theme";
 import { font } from "./font";
 import { shadows } from "./shadows";
@@ -34,12 +34,10 @@ export const theme = extendTheme(
         },
       },
       colors: {
-        primary: {
-          accent: "#0F89D3",
-          main: "#fff",
-          primaryText: "#252525",
-          secondaryText: "",
-        },
+        accent: "#0F89D3",
+        main: "#fff",
+        primaryText: "#252525",
+        secondaryText: "",
       },
     },
   },
