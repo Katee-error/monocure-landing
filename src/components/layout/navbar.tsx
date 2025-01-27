@@ -13,7 +13,7 @@ export const Navbar: React.FC = ({}) => {
         fontWeight={600}
         fontSize={"sm"}
       >
-        <ScrollLink to="section3" smooth={true} duration={700} offset={-80}>
+        <ScrollLink to="section4" smooth={true} duration={700} offset={-80}>
           <ChakraLink
             cursor="pointer"
             _hover={{ color: "blue.500" }}
@@ -24,7 +24,7 @@ export const Navbar: React.FC = ({}) => {
             Anwendung
           </ChakraLink>
         </ScrollLink>
-        <ScrollLink to="section4" smooth={true} duration={700} offset={-80}>
+        <ScrollLink to="section2" smooth={true} duration={700} offset={-80}>
           <ChakraLink
             cursor="pointer"
             _hover={{ color: "blue.500" }}

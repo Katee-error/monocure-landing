@@ -15,6 +15,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
   IconButton,
+  Heading,
 } from "@chakra-ui/react";
 import { ButtonComp } from "../ui/button";
 import { Navbar } from "./navbar";
@@ -27,13 +28,13 @@ export const Header: React.FC = ({}) => {
   return (
     <Box
       id="sticky-nav"
-      py={["15px", "30px"]}
+      py={["15px", "20px"]}
       w="100%"
       position="sticky"
       top="0"
       zIndex="sticky"
       bg="white"
-      boxShadow="sm"
+   
       transition="all 0.3s ease-in-out"
     >
       <Container maxW="container.xl">
@@ -44,11 +45,11 @@ export const Header: React.FC = ({}) => {
           alignItems="center"
           display={{ base: "none", md: "flex" }}
         >
-          <Box mt="-20px">
-            <Link href="/">
-              <Image src={logo} alt="logo" height={40} width={130} />
-            </Link>
-          </Box>
+          <Link href="/">
+            <Heading color="#0F89D3" fontWeight="700">
+              MONOCURE
+            </Heading>
+          </Link>
           <Navbar />
         </Flex>
 

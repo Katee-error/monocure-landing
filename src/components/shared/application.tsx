@@ -138,9 +138,9 @@ export const Application: React.FC<Props> = ({ className }) => {
                           alignItems="center"
                           justifyContent="center"
                           overflow="hidden"
-                          borderRadius="md" // Закругленные углы, если нужно
+                          borderRadius="md" 
                           bg="gray.100"
-                          mx="auto" // Фон на случай, если изображение не загрузится
+                          mx="auto" 
                         >
                           <Image
                             src={item.image}

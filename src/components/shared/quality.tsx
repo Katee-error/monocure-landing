@@ -70,7 +70,6 @@ export const Quality: React.FC = ({}) => {
   const MotionBox = motion(Box);
   return (
     <Box
-      id="section3"
       py={["40px", "60px", "80px"]} 
       ref={ref}
       opacity={isVisible ? 1 : 0}
