@@ -16,7 +16,7 @@ const handleAmazonClick = () => {
   });
 };
 export const ButtonComp: React.FC = ({}) => {
-  const MotionButton = motion(Button);
+  const MotionButton = motion.create(Button);
   return (
     <Link
       href={

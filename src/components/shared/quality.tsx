@@ -67,7 +67,7 @@ export const Quality: React.FC = ({}) => {
 
     return () => observer.disconnect(); 
   }, []);
-  const MotionBox = motion(Box);
+  const MotionBox = motion.create(Box);
   return (
     <Box
       py={["40px", "60px", "80px"]} 
