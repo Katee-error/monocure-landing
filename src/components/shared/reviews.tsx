@@ -130,7 +130,7 @@ export const Reviews: React.FC = ({}) => {
           slidesPerView={1}
           breakpoints={{ 768: { slidesPerView: 3 } }}
           style={{
-            overflow: isMobile ? "hidden" : "visible",
+            overflow: "hidden",
           }}
         >
           {testimonials.map((testimonial) => (

@@ -1,5 +1,5 @@
-'use client'
-import {Flex, useMediaQuery } from "@chakra-ui/react";
+"use client";
+import { Flex, useMediaQuery } from "@chakra-ui/react";
 
 export const VideoReview = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
@@ -17,6 +17,7 @@ export const VideoReview = () => {
         <iframe
           width="100%"
           height="auto"
+          loading="lazy"
           style={{
             aspectRatio: "16/9",
             borderRadius: "10px",
@@ -29,6 +30,7 @@ export const VideoReview = () => {
         <iframe
           width="80%"
           height="auto"
+          loading="lazy"
           style={{
             aspectRatio: "16/9",
             borderRadius: "20px",
