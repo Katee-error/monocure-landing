@@ -19,7 +19,7 @@ export const VideoReview = () => {
           height="auto"
           style={{
             aspectRatio: "16/9",
-            borderRadius: "20px",
+            borderRadius: "10px",
           }}
           src="https://www.youtube.com/embed/JM2DIgF8Cug?playlist=JM2DIgF8Cug&autoplay=1&loop=1&mute=1&modestbranding=1&controls=1"
           allow="autoplay; encrypted-media"
