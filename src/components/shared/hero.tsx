@@ -34,6 +34,7 @@ export const Hero: React.FC = ({}) => {
         transition={{ duration: 1, delay: 0.5 }} 
         ml={-500} 
         zIndex='-1'
+        display={['none', 'block']}
       >
           <Image
             src={"/assets/pack-back.png"}

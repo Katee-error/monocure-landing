@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CookieBanner } from "@/components/shared";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { Box } from "@chakra-ui/react";
 import { StickyButton } from "@/components/ui/sticky-button";
 import Script from "next/script";
@@ -76,7 +75,6 @@ fbq('track', 'PageView');
           <ThemeProvider>
             <Header />
             <Box flex="1">{children}</Box>
-            <Footer />
             <StickyButton />
             <CookieBanner />
           </ThemeProvider>

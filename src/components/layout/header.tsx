@@ -16,12 +16,14 @@ import {
   useDisclosure,
   IconButton,
   Heading,
+  HStack,
 } from "@chakra-ui/react";
 import { ButtonComp } from "../ui/button";
 import { Navbar } from "./navbar";
 import { AlignJustify } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as ChakraLink } from "@chakra-ui/react";
+import { MailIcon } from "../icons/mail-icon";
 
 export const Header: React.FC = ({}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,11 +36,9 @@ export const Header: React.FC = ({}) => {
       top="0"
       zIndex="sticky"
       bg="white"
-   
       transition="all 0.3s ease-in-out"
     >
       <Container maxW="container.xl">
-        {/* DESKTOP */}
         <Flex
           as="header"
           justifyContent="space-between"
@@ -51,9 +51,17 @@ export const Header: React.FC = ({}) => {
             </Heading>
           </Link>
           <Navbar />
+          <HStack spacing="5px">
+            <MailIcon color="balck" boxSize="22px" />
+            <ChakraLink
+              href="mailto:office@monocure.ee"
+              _hover={{ color: "#0F89D3" }}
+              fontWeight="500"
+            >
+              office@monocure.ee
+            </ChakraLink>
+          </HStack>
         </Flex>
-
-        {/* MOBILE */}
         <Flex
           as="header"
           justifyContent="space-between"
@@ -63,7 +71,6 @@ export const Header: React.FC = ({}) => {
           <Link href="/">
             <Image src={logo} alt="logo" height={40} width={110} />
           </Link>
-          {/* Кнопка-бургер */}
           <IconButton
             mt="10px"
             icon={<AlignJustify size={30} />}
@@ -139,6 +146,16 @@ export const Header: React.FC = ({}) => {
               </ScrollLink>
 
               <ButtonComp />
+              <HStack spacing="5px">
+                <MailIcon color="balck" boxSize="22px" />
+                <ChakraLink
+                  href="mailto:office@monocure.ee"
+                  _hover={{ color: "#0F89D3" }}
+                  fontWeight="500"
+                >
+                  office@monocure.ee
+                </ChakraLink>
+              </HStack>
             </Flex>
           </DrawerBody>
         </DrawerContent>

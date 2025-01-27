@@ -112,9 +112,9 @@ export const Reviews: React.FC = ({}) => {
 
   return (
     <Box
-      // bg={'blue.25'}
       id="section5"
-      py={["40px", "60px"]}
+      pt={['40px', '60px']}
+      pb={['40px', '100px']}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
@@ -127,7 +127,7 @@ export const Reviews: React.FC = ({}) => {
             bgColor={"#0F89D3"}
             p={"15px"}
             mb={"10px"}
-            fontSize={{ base: "xs", md: "sm" }} // Меньший размер шрифта на мобильных
+            fontSize={{ base: "xs", md: "sm" }} 
             fontWeight={600}
           >
             #Reviews
@@ -188,7 +188,7 @@ export const Reviews: React.FC = ({}) => {
               </Card>
             </SwiperSlide>
           ))}
-        </Swiper>{" "}
+        </Swiper>
       </Container>
     </Box>
   );
