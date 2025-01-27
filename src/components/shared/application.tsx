@@ -82,16 +82,7 @@ export const Application: React.FC<Props> = ({ className }) => {
     >
       <Container maxW={"container.xl"}>
         <Box mb="40px" textAlign="center">
-          <Badge
-            color={"white"}
-            bgColor={"#0F89D3"}
-            p={"15px"}
-            mb={"10px"}
-            fontSize={{ base: "xs", md: "sm" }}
-            fontWeight={600}
-          >
-            #100
-          </Badge>
+          <Badge>#100</Badge>
           <Heading>Mehr als 100 anwendungsmöglichkeiten</Heading>
         </Box>
 
@@ -137,7 +128,7 @@ export const Application: React.FC<Props> = ({ className }) => {
                   <Slider {...slideSettings}>
                     {application.items.map((item, i) => (
                       <VStack
-                      mt='20px'
+                        mt="20px"
                         key={i}
                         bg="white"
                         borderRadius="md"
@@ -184,7 +175,7 @@ export const Application: React.FC<Props> = ({ className }) => {
                   <SimpleGrid columns={[1, 2, 3]} spacing={4}>
                     {application.items.map((item, i) => (
                       <VStack
-                      mt='30px'
+                        mt="30px"
                         key={i}
                         bg="white"
                         borderRadius="md"

@@ -79,7 +79,7 @@ export const Reviews: React.FC = ({}) => {
   const [expanded, setExpanded] = useState<Record<string | number, boolean>>(
     {}
   );
-    const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
   const toggleReadMore = (id: string | number) => {
     setExpanded((prev) => ({
       ...prev,
@@ -95,24 +95,24 @@ export const Reviews: React.FC = ({}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } 
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect(); 
+    return () => observer.disconnect();
   }, []);
 
   return (
     <Box
       id="section5"
-      pt={['40px', '60px']}
-      pb={['80px', '100px']}
+      pt={["40px", "60px"]}
+      pb={["80px", "100px"]}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
@@ -120,16 +120,7 @@ export const Reviews: React.FC = ({}) => {
     >
       <Container maxW={"container.xl"}>
         <Box textAlign={["center", "start"]}>
-          <Badge
-            color={"white"}
-            bgColor={"#0F89D3"}
-            p={"15px"}
-            mb={"10px"}
-            fontSize={{ base: "xs", md: "sm" }} 
-            fontWeight={600}
-          >
-            #Reviews
-          </Badge>
+          <Badge>#Reviews</Badge>
           <Heading textAlign="start" mb="40px">
             Was unsere Kunden sagen
           </Heading>

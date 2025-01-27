@@ -55,22 +55,22 @@ export const Quality: React.FC = ({}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } 
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect(); 
+    return () => observer.disconnect();
   }, []);
   const MotionBox = motion.create(Box);
   return (
     <Box
-      py={["40px", "60px", "80px"]} 
+      py={["40px", "60px", "80px"]}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
@@ -78,29 +78,30 @@ export const Quality: React.FC = ({}) => {
     >
       <Container maxW={"container.xl"}>
         <Flex
-        bgColor='#0F89D3'
-        p='50px'
+          bgColor="#0F89D3"
+          p="50px"
           justifyContent={"space-between"}
-          gap={["15px", "20px", "30px"]} 
+          gap={["15px", "20px", "30px"]}
           alignItems={"center"}
           borderRadius={"20px"}
-          direction={["column", "row"]} 
+          direction={["column", "row"]}
         >
-          <Box w={["100%", "50%"]} textAlign={["center", "start"]} color='white'>
-            <Badge
-              color={"#0F89D3"}
-              bgColor={"white"}
-              p={"15px"}
-              mb={"10px"}
-              fontSize={{ base: "xs", md: "sm" }}
-              fontWeight={600}
-            >
+          <Box
+            w={["100%", "50%"]}
+            textAlign={["center", "start"]}
+            color="white"
+          >
+            <Badge color={"#0F89D3"} bgColor={"white"}>
               #100
             </Badge>
-            <Heading mb="20px" color='white'>
+            <Heading mb="20px" color="white">
               Sauberkeit im ganzen Haus – ein Produkt für alles
             </Heading>
-            <Text fontSize={{ base: "sm", md: "md" }} mb={["20px", "40px"]} color='white'>
+            <Text
+              fontSize={{ base: "sm", md: "md" }}
+              mb={["20px", "40px"]}
+              color="white"
+            >
               Unser Produkt entfernt effektiv organische Flecken wie Fett,
               Lebensmittelreste, Gras, Beeren und unangenehme Gerüche auf weißen
               и bunten Stoffах, Geschirr sowie Polstermöbeln.
@@ -109,13 +110,12 @@ export const Quality: React.FC = ({}) => {
           </Box>
 
           <Grid
-            templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)"]} 
+            templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)"]}
             gap={{ base: "20px 50px", md: "40px" }}
             alignItems={"center"}
             mt={"30px"}
-           
-            borderRadius='20px'
-            p='20px'
+            borderRadius="20px"
+            p="20px"
           >
             {useMethod.map((use) => (
               <MotionBox
@@ -128,7 +128,6 @@ export const Quality: React.FC = ({}) => {
                   width={["100px", "120px"]}
                   height={["100px", "120px"]}
                   overflow="hidden"
-               
                   borderRadius="50%"
                   mx="auto"
                 >
@@ -144,12 +143,15 @@ export const Quality: React.FC = ({}) => {
                     }}
                   />
                 </Box>
-                <Box bgColor="white" p='7px' borderRadius='10px' mt='10px'>
-                   <Text fontSize={["sm", "14px"]} color="#0F89D3" fontWeight="500">
-                  {use.title}
-                </Text>
+                <Box bgColor="white" p="7px" borderRadius="10px" mt="10px">
+                  <Text
+                    fontSize={["sm", "14px"]}
+                    color="#0F89D3"
+                    fontWeight="500"
+                  >
+                    {use.title}
+                  </Text>
                 </Box>
-               
               </MotionBox>
             ))}
           </Grid>

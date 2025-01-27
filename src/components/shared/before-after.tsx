@@ -103,7 +103,7 @@ export const BeforeAfter: React.FC = () => {
     <Box
       id="section2"
       py={["20px", "50px"]}
-      mb={['0px',"40px"]}
+      mb={["0px", "40px"]}
       position="relative"
       ref={ref}
       opacity={isVisible ? 1 : 0}
@@ -151,16 +151,7 @@ export const BeforeAfter: React.FC = () => {
                   width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
-                  <Badge
-                    color="white"
-                    bgColor="#0F89D3"
-                    p="15px"
-                    mb="20px"
-                    fontSize={{ base: "xs", md: "sm" }}
-                    fontWeight={600}
-                  >
-                    #Before
-                  </Badge>
+                  <Badge>#Before</Badge>
                   <Image
                     src={slide.before}
                     alt={`Before ${index + 1}`}
@@ -178,16 +169,7 @@ export const BeforeAfter: React.FC = () => {
                   width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
-                  <Badge
-                    color="white"
-                    bgColor="#0F89D3"
-                    p="15px"
-                    mb="20px"
-                    fontSize={{ base: "xs", md: "sm" }}
-                    fontWeight={600}
-                  >
-                    #After
-                  </Badge>
+                  <Badge>#After</Badge>
                   <Image
                     src={slide.after}
                     alt={`After ${index + 1}`}
