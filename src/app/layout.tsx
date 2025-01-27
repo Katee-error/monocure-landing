@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/header";
 import { Box } from "@chakra-ui/react";
 import { StickyButton } from "@/components/ui/sticky-button";
 import Script from "next/script";
+import './global.css'
 
 const poppins = Poppins({
   subsets: ["latin"],

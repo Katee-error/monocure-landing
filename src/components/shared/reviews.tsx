@@ -10,6 +10,7 @@ import {
   Badge,
   Card,
   CardBody,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -78,10 +79,7 @@ export const Reviews: React.FC = ({}) => {
   const [expanded, setExpanded] = useState<Record<string | number, boolean>>(
     {}
   );
-  const isMobile =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width: 768px)").matches;
-
+    const [isMobile] = useMediaQuery("(max-width: 768px)");
   const toggleReadMore = (id: string | number) => {
     setExpanded((prev) => ({
       ...prev,
@@ -97,24 +95,24 @@ export const Reviews: React.FC = ({}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Удалить наблюдатель после срабатывания
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.3 } // Срабатывает, если 20% блока в области видимости
+      { threshold: 0.3 } 
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect(); // Очистка
+    return () => observer.disconnect(); 
   }, []);
 
   return (
     <Box
       id="section5"
       pt={['40px', '60px']}
-      pb={['40px', '100px']}
+      pb={['80px', '100px']}
       ref={ref}
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}

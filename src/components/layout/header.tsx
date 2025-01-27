@@ -69,7 +69,9 @@ export const Header: React.FC = ({}) => {
           display={{ base: "flex", md: "none" }}
         >
           <Link href="/">
-            <Image src={logo} alt="logo" height={40} width={110} />
+            <Heading color="#0F89D3" fontWeight="700">
+              MONOCURE
+            </Heading>
           </Link>
           <IconButton
             mt="10px"

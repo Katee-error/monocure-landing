@@ -13,8 +13,9 @@ import {
   VStack,
   Text,
   Image,
+  useMediaQuery,
 } from "@chakra-ui/react";
-
+import Slider from "react-slick";
 import React, { useState, useEffect } from "react";
 import { applications } from "@/data/application";
 
@@ -23,7 +24,6 @@ interface Props {
 }
 
 export const Application: React.FC<Props> = ({ className }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -45,21 +45,37 @@ export const Application: React.FC<Props> = ({ className }) => {
   }, []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   const handleTabClick = (index: number) => {
     setCurrentIndex(index);
-  };
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleTabChange = (index: number) => {
     setActiveIndex(index);
   };
+
+  const handleTabChange = (index: number) => {
+    setCurrentIndex(index);
+    setActiveIndex(index);
+  };
+
+  const slideSettings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+    arrows: false,
+  };
+
   return (
     <Box
       id="section4"
       py={["40px", "60px", "80px"]}
       ref={ref}
+      overflow="hidden"
       opacity={isVisible ? 1 : 0}
       transform={isVisible ? "translateY(0)" : "translateY(50px)"}
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
@@ -79,49 +95,97 @@ export const Application: React.FC<Props> = ({ className }) => {
           <Heading>Mehr als 100 anwendungsmöglichkeiten</Heading>
         </Box>
 
-        <Box className="tabs-container">
-          <Tabs
-            position="relative"
-            variant="soft-rounded"
-            colorScheme={"green"}
-            isLazy
-            index={currentIndex}
-            onChange={(index) => handleTabClick(index)}
-          >
-            <Box className="tabs-wrapper" p="10px" borderRadius="full">
-              <TabList className="scrolling-tabs" position="relative">
-                {applications.map((service, index) => (
-                  <Tab
-                    height={"50px"}
-                    color="#0F89D3"
-                    key={index}
-                    fontSize={"16px"}
-                    fontWeight={{ base: "600" }}
-                    mr={"20px"}
-                    border="1px solid #0F89D3"
-                    position="relative"
-                    onClick={() => handleTabChange(index)}
-                    _selected={{
-                      color: "white",
-                      bg: "#0F89D3",
-                    }}
-                    _hover={{
-                      bg: "blue.100",
-                      color: "#0F89D3",
-                    }}
-                  >
-                    {service.tabName}
-                  </Tab>
-                ))}
-              </TabList>
-            </Box>
-            <TabPanels mt={{ base: "40px", md: "60px" }}>
-              {applications.map((application, index) => (
-                <TabPanel key={index} p={"0px"} textAlign="center">
-                  <SimpleGrid columns={[1, 2, 3]} spacing={4}>
-                    {application.items.map((item, index) => (
+        <Tabs
+          position="relative"
+          variant="soft-rounded"
+          colorScheme={"green"}
+          isLazy
+          index={currentIndex}
+          onChange={(index) => handleTabChange(index)}
+        >
+          <Box className="tabs-wrapper" p="10px" borderRadius="full">
+            <TabList className="scrolling-tabs" position="relative">
+              {applications.map((service, index) => (
+                <Tab
+                  height={"50px"}
+                  color="#0F89D3"
+                  key={index}
+                  fontSize={"16px"}
+                  fontWeight={{ base: "600" }}
+                  mr={"20px"}
+                  border="1px solid #0F89D3"
+                  position="relative"
+                  onClick={() => handleTabChange(index)}
+                  _selected={{
+                    color: "white",
+                    bg: "#0F89D3",
+                  }}
+                  _hover={{
+                    bg: "blue.100",
+                    color: "#0F89D3",
+                  }}
+                >
+                  {service.tabName}
+                </Tab>
+              ))}
+            </TabList>
+          </Box>
+          <TabPanels>
+            {applications.map((application, index) => (
+              <TabPanel key={index} p="0">
+                {isMobile ? (
+                  <Slider {...slideSettings}>
+                    {application.items.map((item, i) => (
                       <VStack
-                        key={index}
+                      mt='20px'
+                        key={i}
+                        bg="white"
+                        borderRadius="md"
+                        p={3}
+                        spacing={3}
+                        width="100%"
+                        h="350px"
+                        mx="auto"
+                      >
+                        <Box
+                          width="300px"
+                          height="300px"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          overflow="hidden"
+                          borderRadius="md"
+                          bg="gray.100"
+                          mx="auto"
+                        >
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            width={120}
+                            height={120}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        </Box>
+                        <Text
+                          fontSize="lg"
+                          fontWeight="semibold"
+                          textAlign="center"
+                        >
+                          {item.title}
+                        </Text>
+                      </VStack>
+                    ))}
+                  </Slider>
+                ) : (
+                  <SimpleGrid columns={[1, 2, 3]} spacing={4}>
+                    {application.items.map((item, i) => (
+                      <VStack
+                      mt='30px'
+                        key={i}
                         bg="white"
                         borderRadius="md"
                         boxShadow="md"
@@ -138,9 +202,9 @@ export const Application: React.FC<Props> = ({ className }) => {
                           alignItems="center"
                           justifyContent="center"
                           overflow="hidden"
-                          borderRadius="md" 
+                          borderRadius="md"
                           bg="gray.100"
-                          mx="auto" 
+                          mx="auto"
                         >
                           <Image
                             src={item.image}
@@ -154,7 +218,6 @@ export const Application: React.FC<Props> = ({ className }) => {
                             }}
                           />
                         </Box>
-
                         <Text
                           fontSize="lg"
                           fontWeight="semibold"
@@ -165,11 +228,11 @@ export const Application: React.FC<Props> = ({ className }) => {
                       </VStack>
                     ))}
                   </SimpleGrid>
-                </TabPanel>
-              ))}
-            </TabPanels>
-          </Tabs>
-        </Box>
+                )}
+              </TabPanel>
+            ))}
+          </TabPanels>
+        </Tabs>
       </Container>
     </Box>
   );

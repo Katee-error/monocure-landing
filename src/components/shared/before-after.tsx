@@ -45,7 +45,7 @@ export const BeforeAfter: React.FC = () => {
   }, []);
 
   const settings: SliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: false,
     autoplaySpeed: 3000,
@@ -103,7 +103,7 @@ export const BeforeAfter: React.FC = () => {
     <Box
       id="section2"
       py={["20px", "50px"]}
-      mb={"40px"}
+      mb={['0px',"40px"]}
       position="relative"
       ref={ref}
       opacity={isVisible ? 1 : 0}

@@ -4,7 +4,7 @@ const VideoReview = () => {
   return (
     <Box bg="white" mb="40px" borderRadius="md" p={4} textAlign="center" mt={8}>
 
-      <AspectRatio ratio={16 / 9} maxW={["100%", "100%"]} mx="auto">
+      <AspectRatio ratio={16 / 9} maxW={["100%", "90%"]} mx="auto">
         <video
           title="Video Übersicht"
           src="/assets/video/monocure.mp4"
