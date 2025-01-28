@@ -14,6 +14,7 @@ import {
   Text,
   Image,
   useMediaQuery,
+  Flex,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import React, { useState, useEffect } from "react";
@@ -172,7 +173,7 @@ export const Application: React.FC<Props> = ({ className }) => {
                     ))}
                   </Slider>
                 ) : (
-                  <SimpleGrid columns={[1, 2, 3]} spacing={4}>
+                  <Flex flexWrap='wrap' justifyContent='center'  gap='20px 60px'>
                     {application.items.map((item, i) => (
                       <VStack
                         mt="30px"
@@ -184,7 +185,6 @@ export const Application: React.FC<Props> = ({ className }) => {
                         spacing={3}
                         width="350px"
                         h="250px"
-                        mx="auto"
                       >
                         <Box
                           width="300px"
@@ -218,7 +218,7 @@ export const Application: React.FC<Props> = ({ className }) => {
                         </Text>
                       </VStack>
                     ))}
-                  </SimpleGrid>
+                  </Flex>
                 )}
               </TabPanel>
             ))}

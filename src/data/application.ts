@@ -1,18 +1,14 @@
 export const applications = [
   {
     tabName: "Küche",
-    items :[
+    items: [
       {
         title: "Entfernung von Fett auf Geschirr",
-        image: "/assets/application/kitchen/1.jpeg", 
+        image: "/assets/application/kitchen/1.jpeg",
       },
       {
         title: "Reinigung der Mikrowelle",
         image: "/assets/application/kitchen/2.jpeg",
-      },
-      {
-        title: "Geschirr spülen",
-        image: "/assets/application/kitchen/3.jpeg"
       },
       {
         title: "Reinigung des Herdes",
@@ -30,10 +26,10 @@ export const applications = [
   },
   {
     tabName: "Badezimmer",
-    items :[
+    items: [
       {
         title: "Reinigung von Sanitäranlagen",
-        image: "/assets/application/bathroom/1.jpeg", 
+        image: "/assets/application/bathroom/1.jpeg",
       },
       {
         title: "Bekämpfung von Schimmel",
@@ -41,11 +37,7 @@ export const applications = [
       },
       {
         title: "Reinigung von Fliesen und Oberflächen",
-        image: "/assets/application/bathroom/3.jpeg"
-      },
-      {
-        title: "Beseitigung von Rohrverstopfungen",
-        image: "/assets/application/bathroom/4.jpeg",
+        image: "/assets/application/bathroom/3.jpeg",
       },
       {
         title: "Reinigung von Glasflächen",
@@ -59,10 +51,10 @@ export const applications = [
   },
   {
     tabName: "Wohnzimmer",
-    items :[
+    items: [
       {
         title: "Entfernung von Flecken",
-        image: "/assets/application/living/1.jpeg", 
+        image: "/assets/application/living/1.jpeg",
       },
       {
         title: "Teppichreinigung",
@@ -70,7 +62,7 @@ export const applications = [
       },
       {
         title: "Reinigung von Polstermöbeln",
-        image: "/assets/application/living/3.jpeg"
+        image: "/assets/application/living/3.jpeg",
       },
       {
         title: "Reinigung von Oberflächen",
@@ -80,32 +72,39 @@ export const applications = [
         title: "Fenster- und Spiegelreinigung",
         image: "/assets/application/living/5.jpeg",
       },
-      
     ],
   },
   {
     tabName: "Kleidung und Schuhe",
-    items :[
+    items: [
       {
         title: "Reinigung der Schuhsohle",
-        image: "/assets/application/clothes/1.jpeg", 
+        image: "/assets/application/clothes/1.jpeg",
       },
       {
-        title: "Entfernung von Flecken",
-        image: "/assets/application/clothes/2.jpeg",
+        title: "Entfernung hartnäckiger Flecken auf Kinderkleidung",
+        image: "/assets/application/clothes/2.jpg",
       },
       {
         title: "Aufhellung/Weißmachen",
-        image: "/assets/application/clothes/3.webp"
+        image: "/assets/application/clothes/3.webp",
+      },
+      {
+        title: "Waschen von farbigen Textilien",
+        image: "/assets/application/clothes/4.jpeg",
+      },
+      {
+        title: "Entfernung von Flecken",
+        image: "/assets/application/clothes/5.jpeg",
       },
     ],
   },
   {
     tabName: "Geschirrspül- und Waschmaschinen",
-    items :[
+    items: [
       {
         title: "Reinigung der Spülmaschine",
-        image: "/assets/application/dishw/1.jpeg", 
+        image: "/assets/application/dishw/1.jpeg",
       },
       {
         title: "Reinigung der Waschmaschine",
@@ -113,26 +112,9 @@ export const applications = [
       },
       {
         title: "Bekämpfung von Kalkablagerungen",
-        image: "/assets/application/dishw/3.jpeg"
+        image: "/assets/application/dishw/3.jpeg",
       },
     ],
   },
-  {
-    tabName: "Schmuck",
-    items :[
-      {
-        title: "Reinigung von Schmuck",
-        image: "/assets/application/gold/1.jpeg", 
-      },
-      {
-        title: "Reinigung von Schmuck",
-        image: "/assets/application/gold/2.jpeg",
-      },
-      {
-        title: "Reinigung von Schmuck",
-        image: "/assets/application/gold/3.jpeg"
-      },
-    ],
-  },
-
+  
 ];

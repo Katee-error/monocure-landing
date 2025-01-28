@@ -147,9 +147,8 @@ export const BeforeAfter: React.FC = () => {
                     src={slide.before}
                     alt={`Before ${index + 1}`}
                     borderRadius="md"
-                    boxShadow="md"
                     width="100%"
-                    height={{ base: "250px", md: "350px" }}
+                    height={{ base: "250px", md: "400px" }}
                     objectFit="cover"
                   />
                 </Box>
@@ -163,9 +162,8 @@ export const BeforeAfter: React.FC = () => {
                     src={slide.after}
                     alt={`After ${index + 1}`}
                     borderRadius="md"
-                    boxShadow="md"
                     width="100%"
-                    height={{ base: "250px", md: "350px" }}
+                    height={{ base: "250px", md: "400px" }}
                     objectFit="cover"
                   />
                 </Box>
