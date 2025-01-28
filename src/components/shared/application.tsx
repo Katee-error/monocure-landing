@@ -74,7 +74,7 @@ export const Application: React.FC<Props> = ({ className }) => {
   return (
     <Box
       id="section4"
-      py={["40px", "60px", "80px"]}
+      py={["40px", "60px", "40px"]}
       ref={ref}
       overflow="hidden"
       opacity={isVisible ? 1 : 0}
