@@ -93,10 +93,6 @@ export const BeforeAfter: React.FC = () => {
       before: "/assets/after-before/9-bf.webp",
       after: "/assets/after-before/9-af.webp",
     },
-    {
-      before: "/assets/after-before/10-bf.webp",
-      after: "/assets/after-before/10-af.webp",
-    },
   ];
 
   return (
