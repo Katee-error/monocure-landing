@@ -110,8 +110,6 @@ export const BeforeAfter: React.FC = () => {
         <Heading textAlign="center" mb={["20px", "40px"]}>
           Sichtbare Ergebnisse nach der Anwendung von Monocure.
         </Heading>
-
-        {/* Кнопка "Назад" */}
         <Button
           position="absolute"
           top={["60%", "60%"]}
@@ -128,8 +126,6 @@ export const BeforeAfter: React.FC = () => {
         >
           <ChevronLeft />
         </Button>
-
-        {/* Слайдер */}
         <Slider {...settings} ref={sliderRef}>
           {slides.map((slide, index) => (
             <Box key={index} overflow="visible">
@@ -141,13 +137,12 @@ export const BeforeAfter: React.FC = () => {
                 gap="20px"
                 pb={"30px"}
               >
-                {/* Фото "До" */}
                 <Box
                   textAlign="center"
                   width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
-                  <Badge>#Before</Badge>
+                  <Badge>#Vor</Badge>
                   <Image
                     src={slide.before}
                     alt={`Before ${index + 1}`}
@@ -158,14 +153,12 @@ export const BeforeAfter: React.FC = () => {
                     objectFit="cover"
                   />
                 </Box>
-
-                {/* Фото "После" */}
                 <Box
                   textAlign="center"
                   width={{ base: "100%", md: "40%" }}
                   px="10px"
                 >
-                  <Badge>#After</Badge>
+                  <Badge>#Nach</Badge>
                   <Image
                     src={slide.after}
                     alt={`After ${index + 1}`}
@@ -180,8 +173,6 @@ export const BeforeAfter: React.FC = () => {
             </Box>
           ))}
         </Slider>
-
-        {/* Кнопка "Вперед" */}
         <Button
           position="absolute"
           top={["60%", "60%"]}
