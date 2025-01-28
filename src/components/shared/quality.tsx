@@ -17,12 +17,12 @@ const useMethod = [
   {
     id: 1,
     title: "KALK",
-    img: "/assets/use/1.webp",
+    img: "/assets/use/1.jpeg",
   },
   {
     id: 2,
     title: "ERDE UND GRAS",
-    img: "/assets/use/2.webp",
+    img: "/assets/use/2.png",
   },
   {
     id: 3,
@@ -32,17 +32,17 @@ const useMethod = [
   {
     id: 4,
     title: "FETT",
-    img: "/assets/use/4.webp",
+    img: "/assets/use/4.jpg",
   },
   {
     id: 5,
     title: "BLUT",
-    img: "/assets/use/5.webp",
+    img: "/assets/use/5.jpg",
   },
   {
     id: 6,
     title: "SILBERSULFID",
-    img: "/assets/use/6.webp",
+    img: "/assets/use/6.jpg",
   },
 ];
 
