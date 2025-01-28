@@ -94,7 +94,7 @@ export const Quality: React.FC = ({}) => {
             <Badge color={"#0F89D3"} bgColor={"white"}>
               #100
             </Badge>
-            <Heading mb="20px" color="white">
+            <Heading mb="20px" color="white" fontSize={['24px', '36px']}>
               Sauberkeit im ganzen Haus – ein Produkt für alles
             </Heading>
             <Text

@@ -84,7 +84,7 @@ export const Application: React.FC<Props> = ({ className }) => {
       <Container maxW={"container.xl"}>
         <Box mb="40px" textAlign="center">
           <Badge>#100</Badge>
-          <Heading>Mehr als 100 anwendungsmöglichkeiten</Heading>
+          <Heading fontSize={['24px', '36px']}>Mehr als 100 anwendungsmöglichkeiten</Heading>
         </Box>
 
         <Tabs

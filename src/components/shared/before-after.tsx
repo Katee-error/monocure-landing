@@ -107,7 +107,7 @@ export const BeforeAfter: React.FC = () => {
       transition="opacity 0.8s ease-out, transform 0.6s ease-out"
     >
       <Container maxW="container.xl">
-        <Heading textAlign="center" mb={["20px", "40px"]}>
+        <Heading textAlign="center" mb={["20px", "40px"]} fontSize={['24px', '36px']}>
           Sichtbare Ergebnisse nach der Anwendung von Monocure.
         </Heading>
         <Button

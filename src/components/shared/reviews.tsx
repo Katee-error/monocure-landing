@@ -121,7 +121,7 @@ export const Reviews: React.FC = ({}) => {
       <Container maxW={"container.xl"}>
         <Box textAlign={["center", "start"]}>
           <Badge>#Reviews</Badge>
-          <Heading textAlign="start" mb="40px">
+          <Heading textAlign="start" mb="40px" fontSize={['24px', '36px']}>
             Was unsere Kunden sagen
           </Heading>
         </Box>

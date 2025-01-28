@@ -35,15 +35,15 @@ export const theme = extendTheme(
     components: {
       Badge: {
         baseStyle: {
-          color:"primaryText",
-          bgColor:"accent",
-          padding:"5px 10px",
-          mb:"20px",
-          borderRadius: 'full',
+          color: "primaryText",
+          bgColor: "accent",
+          padding: "5px 10px",
+          mb: "20px",
+          borderRadius: "full",
           fontWeight: 600,
-          fontSize: '14px'
-        }
-      }
-    }
+          fontSize: "14px",
+        },
+      },
+    },
   }
 );
