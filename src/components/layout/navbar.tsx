@@ -1,9 +1,17 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link as ChakraLink, Flex } from "@chakra-ui/react";
 
 export const Navbar: React.FC = ({}) => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <nav>
       <Flex

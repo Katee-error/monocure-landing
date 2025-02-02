@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Box,
@@ -23,8 +23,16 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { MailIcon } from "../icons/mail-icon";
 
-export const Header: React.FC = ({}) => {
+export const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
+  
+    if (!isClient) {
+      return null;
+    }
   return (
     <Box
       id="sticky-nav"
@@ -43,7 +51,7 @@ export const Header: React.FC = ({}) => {
           alignItems="center"
           display={{ base: "none", md: "flex" }}
         >
-          <Link href="/">
+          <Link href="/" passHref>
             <Heading color="#0F89D3" fontWeight="700">
               MONOCURE
             </Heading>
@@ -51,13 +59,11 @@ export const Header: React.FC = ({}) => {
           <Navbar />
           <HStack spacing="5px">
             <MailIcon color="balck" boxSize="22px" />
-            <ChakraLink
-              href="mailto:office@monocure.ee"
-              _hover={{ color: "#0F89D3" }}
-              fontWeight="500"
-            >
-              office@monocure.ee
-            </ChakraLink>
+            <Link href="mailto:office@monocure.ee" passHref>
+              <ChakraLink _hover={{ color: "#0F89D3" }} fontWeight="500">
+                office@monocure.ee
+              </ChakraLink>
+            </Link>
           </HStack>
         </Flex>
         <Flex
@@ -66,7 +72,7 @@ export const Header: React.FC = ({}) => {
           alignItems={["baseline", "center"]}
           display={{ base: "flex", md: "none" }}
         >
-          <Link href="/">
+          <Link href="/" passHref>
             <Heading color="#0F89D3" fontWeight="700">
               MONOCURE
             </Heading>
@@ -82,7 +88,7 @@ export const Header: React.FC = ({}) => {
         </Flex>
       </Container>
 
-      {/* Drawer для мобильного меню */}
+      {/* Drawer for mobile menu */}
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -148,13 +154,14 @@ export const Header: React.FC = ({}) => {
               <ButtonComp />
               <HStack spacing="5px">
                 <MailIcon color="balck" boxSize="22px" />
-                <ChakraLink
-                  href="mailto:office@monocure.ee"
-                  _hover={{ color: "#0F89D3" }}
-                  fontWeight="500"
-                >
-                  office@monocure.ee
-                </ChakraLink>
+                <Link href="mailto:office@monocure.ee" passHref>
+                  <ChakraLink
+                    _hover={{ color: "#0F89D3" }}
+                    fontWeight="500"
+                  >
+                    office@monocure.ee
+                  </ChakraLink>
+                </Link>
               </HStack>
             </Flex>
           </DrawerBody>
