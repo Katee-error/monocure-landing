@@ -9,6 +9,7 @@ import { Box } from "@chakra-ui/react";
 import { StickyButton } from "@/components/ui/sticky-button";
 import Script from "next/script";
 import './global.css'
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,21 +20,49 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cleaner.monocure.ee"),
-  title: "Monocure",
-  description: "ALL-IN-ONE solution",
+ title: "Monocure | Powerful Bleach & Cleaner",
+  keywords: [
+    "bleach",
+    "cleaner",
+    "powerful cleaner",
+    "universal cleaner",
+    "effective bleach",
+    "professional cleaner",
+    "eco-friendly cleaner",
+    "chlorine-free bleach",
+    "safe bleach",
+    "concentrated cleaner",
+    "fabric bleach",
+    "clothing bleach",
+    "surface cleaner",
+    "kitchen cleaner",
+    "bathroom cleaner",
+    "stain remover",
+    "tile cleaner",
+    "plastic bleach",
+    "glass cleaner",
+    "degreaser",
+    "buy bleach",
+    "buy cleaner",
+    "order bleach",
+    "effective cleaning solution",
+    "professional cleaning products",
+    "best stain remover"
+  ],
+  description: "High-quality bleach and cleaners for effective stain removal and surface cleaning. Safe and eco-friendly solutions.",
   robots: "index, follow",
   twitter: {
     card: "summary_large_image",
-    title: "Monocure",
-    description: "All-in-one solution",
+    title: "Monocure | Powerful Bleach & Cleaner",
+    description: "High-quality bleach and cleaners for effective stain removal and surface cleaning. Safe and eco-friendly solutions.",
     images: "/assets/opengraph-image.png",
   },
   openGraph: {
     type: "website",
     url: "https://cleaner.monocure.ee",
-    title: "Monocure",
-    description: "All-in-one solution",
-    siteName: "Monocure",
+    title: "Monocure | Powerful Bleach & Cleaner",
+    description: "High-quality bleach and cleaners for effective stain removal and surface cleaning. Safe and eco-friendly solutions.",
+    siteName:"Monocure | Powerful Bleach & Cleaner",
     images: {
       url: "/assets/opengraph-image.png",
     },
@@ -49,27 +78,25 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Script id="fb-pixel" strategy="afterInteractive">
         {`
-             !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'pixel ID');
-fbq('track', 'PageView');
-
-            `}
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', 'pixel ID');
+          fbq('track', 'PageView');
+        `}
       </Script>
       <body className={poppins.className}>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-          />
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" alt={""}          />
         </noscript>
 
         <Box display="flex" flexDirection="column" minHeight="100vh">

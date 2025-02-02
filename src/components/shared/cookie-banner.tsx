@@ -27,7 +27,6 @@ export const CookieBanner: React.FC = () => {
         border="1px solid #e2e8f0"
         borderRadius="md"
       >
-        {/* Кнопка закрытия */}
         <IconButton
           aria-label="Close banner"
           icon={<X />}

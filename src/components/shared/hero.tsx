@@ -13,7 +13,7 @@ export const Hero: React.FC = ({}) => {
       >
         <Box>
           <Image
-            src={"/assets/pack.webp"}
+            src={"/assets/pack/pack.webp"}
             alt={"pack"}
             width={700}
             height={600}
@@ -22,7 +22,7 @@ export const Hero: React.FC = ({}) => {
         </Box>
         <Box ml={-500} zIndex="-1" display={["none", "block"]}>
           <Image
-            src={"/assets/pack-back.png"}
+            src={"/assets/pack/pack-back.png"}
             alt={"another pack"}
             width={700}
             height={600}
